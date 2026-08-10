@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Labs from './pages/SchoolPrograms/Labs';
 import Books from './pages/SchoolPrograms/Books';
-import PrivacyPolicy from './pages/PrivacyPolicy';
+import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/school-programs/labs" element={<Labs />} />
           <Route path="/school-programs/books" element={<Books />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/terms-and-conditions" element={<Terms />} />
         </Route>
       </Routes>
