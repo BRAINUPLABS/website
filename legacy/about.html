@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>brainup - About Us</title>
+  <style>
+    :root {
+      --orange: #f5871f;
+      --orange-dark: #e57a13;
+      --navy: #0b1f3a;
+      --navy-2: #12294d;
+      --yellow: #ffd23f;
+      --text-dark: #22262b;
+      --text-gray: #5b6470;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      color: var(--text-dark);
+      line-height: 1.5;
+      background: #fff;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--navy);
+      position: relative;
+      padding-bottom: 18px;
+      margin-bottom: 44px;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 4px;
+      background: var(--yellow);
+      border-radius: 2px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: #F5871F;
+      padding: 60px 0 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero .container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1 1 420px;
+      color: #fff;
+    }
+
+    .hero-text h1 {
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 520px;
+      opacity: .97;
+    }
+
+    .hero-img {
+      flex: 1 1 320px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-img img {
+      border-radius: 16px;
+      /* box-shadow:0 20px 40px rgba(0,0,0,.25); */
+      max-width: 100%;
+    }
+
+    /* ===== ABOUT PARAGRAPH ===== */
+    .about-para {
+      padding: 56px 0;
+      text-align: center;
+    }
+
+    .about-para p {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 16px;
+      color: var(--text-gray);
+      line-height: 1.8;
+    }
+
+    .about-para strong {
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    /* ===== SUPPORTED BY ===== */
+    .supported {
+      padding: 50px 0 60px;
+      background: #fafafa;
+    }
+
+    .supported-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .supported-logos img {
+      height: 200px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(0%);
+    }
+
+    /* ===== GALLERY ===== */
+    .gallery {
+      padding: 0 0 60px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* ===== JOURNEY / VIDEO PLACEHOLDER SECTIONS ===== */
+    .journey {
+      padding: 60px 0;
+      background: #fff;
+    }
+
+    .journey-videos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .video-placeholder {
+      background: #0d0d0d;
+      border-radius: 12px;
+      aspect-ratio: 16/10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* ===== FUEL / FOUNDERS ===== */
+    .founders-section {
+      padding: 60px 0;
+      background: #fdfaf5;
+    }
+
+    .founders-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 44px;
+      color: var(--text-gray);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .founders-grid {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      flex-wrap: wrap;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .founders-grid .person-card {
+      flex: 0 0 200px;
+    }
+
+    .person-card {
+      text-align: center;
+    }
+
+    .person-card img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 14px;
+      border: 4px solid #fff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+      transition: transform 0.3s ease;
+    }
+
+    .person-card img:hover {
+      transform: scale(1.1);
+    }
+
+    .person-card h3 {
+      font-size: 17px;
+      color: var(--navy);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .person-card p {
+      font-size: 13.5px;
+      color: var(--text-gray);
+    }
+
+    /* ===== ADVISORS / TEAM (4 col grid) ===== */
+    .team-section {
+      padding: 60px 0;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px 20px;
+    }
+
+    .team-grid.three-col {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      text-align: center;
+    }
+
+    .team-card img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 12px;
+      border: 3px solid #fff;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .1);
+    }
+
+    .team-card h4 {
+      font-size: 14.5px;
+      color: var(--navy);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .team-card p {
+      font-size: 12.5px;
+      color: var(--text-gray);
+      margin-bottom: 8px;
+    }
+
+    .linkedin-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: #0077b5;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .bg-tint {
+      background: #fdfaf5;
+    }
+
+    /* ===== TEAM VIDEO ===== */
+    .dynamic-team {
+      padding: 60px 0;
+    }
+
+    .dynamic-team .video-placeholder {
+      max-width: 900px;
+      margin: 0 auto;
+      aspect-ratio: 16/8;
+    }
+
+    /* ===== MEDIA ===== */
+    .media-section {
+      padding: 60px 0;
+      background: #fdfaf5;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .media-item .video-placeholder {
+      aspect-ratio: 16/10;
+      margin-bottom: 14px;
+    }
+
+    .media-item p {
+      text-align: center;
+      font-size: 13.5px;
+      color: var(--text-gray);
+      line-height: 1.6;
+    }
+
+    /* ===== AWARDS ===== */
+    .awards-section {
+      padding: 60px 0;
+    }
+
+    .awards-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: -24px auto 40px;
+      color: var(--text-gray);
+      font-size: 15px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+
+    .badge-row img {
+      height: 150px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* ===== PATRONS ===== */
+    .patrons-section {
+      padding: 60px 0;
+      background: #fdfaf5;
+    }
+
+    .patrons-intro {
+      text-align: center;
+      max-width: 750px;
+      margin: -24px auto 40px;
+      color: var(--text-gray);
+      font-size: 14.5px;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .patrons-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .patron-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px 16px;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .06);
+    }
+
+    .patron-card img {
+      height: 50px;
+      margin: 0 auto 12px;
+      object-fit: contain;
+    }
+
+    .patron-card h4 {
+      font-size: 13.5px;
+      color: var(--navy);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .patron-card p {
+      font-size: 12px;
+      color: var(--text-gray);
+      line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media(max-width:900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .patrons-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .journey-videos {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:640px) {
+      .hero-text h1 {
+        font-size: 30px;
+      }
+
+      .founders-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .patrons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 22px;
+      }
+
+      .supported-logos img {
+        height: 50px;
+      }
+    }
+
+    /* ===== ANNOUNCEMENT BAR ===== */
+    #announcementBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      background: #1899cc;
+    }
+
+    #announcementBar .announcement-inner {
+      width: 100%;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    #announcementBar .announcement-text {
+      overflow: hidden;
+      width: 100%;
+      color: white;
+    }
+
+    #announcementBar .announcement-track {
+      display: flex;
+      gap: 50px;
+      white-space: nowrap;
+      width: max-content;
+    }
+
+    #announcementBar span {
+      white-space: nowrap;
+    }
+
+    @media(max-width:768px) {
+      #announcementBar .announcement-track {
+        animation: marquee 12s linear infinite;
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    @media(min-width:769px) {
+      #announcementBar .announcement-text {
+        display: flex;
+        justify-content: center;
+      }
+
+      #announcementBar .announcement-track {
+        animation: none;
+        transform: none;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    /* ===== NAVBAR ===== */
+    .ab-navbar {
+      position: fixed;
+      top: 38px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      overflow: visible;
+    }
+
+    .ab-nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 90px;
+    }
+
+    .ab-nav-left {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .ab-nav-logo img {
+      height: 250px;
+      width: auto;
+      object-fit: contain;
+      position: absolute;
+      left: -100px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .ab-nav-menu {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: visible;
+    }
+
+    .ab-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+
+    .ab-nav-link {
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #5C6B82;
+      border-radius: 8px;
+      transition: color 0.35s, background 0.35s;
+      white-space: nowrap;
+      text-decoration: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .ab-nav-link:hover {
+      color: #1899cc;
+      background: rgba(30, 79, 216, 0.06);
+    }
+
+    .ab-btn-signin {
+      background: linear-gradient(135deg, #FF822E, #ffaa6b);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: all 0.35s;
+      box-shadow: 0 4px 16px rgba(255, 107, 53, 0.3);
+      white-space: nowrap;
+      text-decoration: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .ab-btn-signin:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4);
+    }
+
+    .ab-account {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .ab-account-icon {
+      width: 30px;
+      height: 30px;
+      background: #f59e0b;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s ease;
+    }
+
+    .ab-account-icon i {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .ab-account p {
+      margin-top: 8px;
+      font-size: 10px;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .ab-account:hover .ab-account-icon {
+      background: #2DA5E8;
+      transform: scale(1.05);
+    }
+
+    .ab-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      margin-left: auto;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .ab-hamburger span {
+      width: 22px;
+      height: 2px;
+      background: #0D1117;
+      border-radius: 2px;
+      transition: all 0.35s;
+      display: block;
+    }
+
+    /* ===== MEGA MENU ===== */
+    .ab-mega-item {
+      position: static;
+    }
+
+    .ab-mega-menu {
+      position: absolute;
+      top: 200%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      background: #ffffff;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
+      border-top: 3px solid #3ABBF1;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s;
+      z-index: 998;
+      height: 440px;
+    }
+
+    .ab-mega-item:hover .ab-mega-menu {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .ab-mega-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 280px 1fr 1fr 1fr 1fr;
+      gap: 35px;
+      height: 100%;
+      align-items: start;
+    }
+
+    .ab-mega-links {
+      background: #FAFAFA;
+      border-right: 1px solid #ECECEC;
+      padding: 35px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      height: 100%;
+    }
+
+    .ab-mega-heading {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #222;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .ab-mega-links a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      height: 52px;
+      padding: 0 12px;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: 500;
+      color: #333;
+      transition: background 0.25s, color 0.25s;
+      text-decoration: none;
+    }
+
+    .ab-mega-links a i {
+      font-size: 22px;
+      color: #3ABBF1;
+      width: 24px;
+      flex-shrink: 0;
+      transition: color 0.25s;
+    }
+
+    .ab-mega-links a:hover {
+      background: #F3F8FD;
+      color: #2196F3;
+    }
+
+    .ab-mega-links a:hover i {
+      color: #2196F3;
+    }
+
+    .ab-mega-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px 0 25px;
+      cursor: pointer;
+    }
+
+    .ab-mega-card img {
+      width: 170px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.25s;
+      display: block;
+    }
+
+    .ab-mega-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .ab-mega-card span {
+      margin-top: 14px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #222;
+      line-height: 1.4;
+      text-transform: uppercase;
+      transition: color 0.25s;
+      display: block;
+    }
+
+    .ab-mega-card:hover span {
+      color: #3ABBF1;
+    }
+
+    /* body top padding for fixed bars */
+    body {
+      padding-top: 128px;
+    }
+
+    @media(max-width:1200px) {
+      .ab-mega-inner {
+        grid-template-columns: 240px 1fr 1fr;
+        height: auto;
+      }
+
+      .ab-mega-menu {
+        height: auto;
+      }
+
+      .ab-mega-card:nth-child(n+4) {
+        display: none;
+      }
+    }
+
+    @media(max-width:768px) {
+      .ab-mega-menu {
+        display: none !important;
+      }
+
+      .ab-hamburger {
+        display: flex;
+      }
+
+      .ab-nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        width: 280px;
+        background: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 80px 28px 28px;
+        gap: 8px;
+        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.1);
+        transition: right 0.35s;
+        z-index: 9999;
+        left: auto;
+        transform: none;
+      }
+
+      .ab-nav-menu.open {
+        right: 0;
+      }
+
+      .ab-nav-link {
+        padding: 12px 16px;
+        font-size: 1rem;
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      .ab-btn-signin {
+        display: none;
+      }
+    }
+
+
+
+
+    /* =========================================
+   RESET / BASE
+========================================= */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      background-color: #fafafa;
+      color: #262626;
+    }
+
+    /* =========================================
+   INSTAGRAM SECTION WRAPPER
+========================================= */
+    .instagram-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .instagram-section__header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .instagram-section__header h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .instagram-section__header p {
+      font-size: 1rem;
+      color: #8e8e8e;
+      margin: 0;
+    }
+
+    /* =========================================
+   RESPONSIVE GRID FOR EMBEDS
+   - Side by side on desktop
+   - Stacks on tablet / mobile
+========================================= */
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      align-items: start;
+      justify-items: center;
+    }
+
+    .instagram-embed-item {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      background: #fff;
+    }
+
+    .instagram-embed-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .instagram-embed-item iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      display: block;
+    }
+
+    .ig-view-profile {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .ig-view-profile:hover {
+      opacity: 0.88;
+    }
+
+    /* =========================================
+   TABLET
+========================================= */
+    @media (max-width: 992px) {
+      .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* =========================================
+   MOBILE - STACK
+========================================= */
+    @media (max-width: 640px) {
+      .instagram-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .instagram-section__header h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="announcement-inner">
+      <div class="announcement-dot"></div>
+      <div class="announcement-text" id="announcementText">
+        <div class="announcement-track" id="announcementTrack">
+          <span>🚀 Now Live! Brain Up Labs – Building Future Innovators with Neurotech, AI & Robotics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="ab-navbar">
+    <div class="ab-nav-container">
+      <div class="ab-nav-left">
+        <a href="index.html" class="ab-nav-logo">
+          <img src="images/logo/brain.png" alt="Logo" />
+        </a>
+      </div>
+      <ul class="ab-nav-menu" id="abNavMenu">
+        <li class="ab-mega-item">
+          <a href="index.html#hero" class="ab-nav-link">Products <i class="fas fa-chevron-down"></i></a>
+          <div class="ab-mega-menu">
+            <div class="ab-mega-inner">
+              <div class="ab-mega-links">
+                <p class="ab-mega-heading">Products</p>
+                <a href="index.html#educational-kits"><i class="fas fa-box"></i> Kits</a>
+                <a href="index.html#pictoblox"><i class="fas fa-book"></i> Books</a>
+                <a href="index.html#curriculum"><i class="fas fa-code"></i> Coding Platform</a>
+                <a href="index.html#teacher-development"><i class="fas fa-microchip"></i> Blockduino</a>
+                <a href="index.html#codeavour"><i class="fas fa-laptop"></i> LMS</a>
+              </div>
+              <div class="ab-mega-card"><img src="images/ecosystem/class4.png" alt="Kits"><span>DIY Kits</span></div>
+              <div class="ab-mega-card"><img src="images/ecosystem/codi.png" alt="Coding"><span>Coding</span></div>
+              <div class="ab-mega-card"><img src="images/ecosystem/aihai.png" alt="AI"><span>AI Platform</span></div>
+              <div class="ab-mega-card"><img src="images/ecosystem/robo.png" alt="Robotics"><span>Robotics</span></div>
+            </div>
+          </div>
+        </li>
+        <li class="ab-mega-item">
+          <a href="index.html#why" class="ab-nav-link">School Programs <i class="fas fa-chevron-down"></i></a>
+          <div class="ab-mega-menu">
+            <div class="ab-mega-inner">
+              <div class="ab-mega-links">
+                <p class="ab-mega-heading">School Programs</p>
+                <a href="#"><i class="fas fa-flask"></i> Labs</a>
+                <a href="#"><i class="fas fa-book-open"></i> Curriculum & Books</a>
+                <a href="#"><i class="fas fa-school"></i> ATL Labs</a>
+                <a href="#"><i class="fas fa-chalkboard-teacher"></i> Teacher Training</a>
+              </div>
+              <div class="ab-mega-card"><img src="images/school/sch_01.jpeg" alt="School"><span>Partner Schools</span>
+              </div>
+              <div class="ab-mega-card"><img src="images/school/sch_002.jpg" alt="Lab"><span>Smart Labs</span></div>
+              <div class="ab-mega-card"><img src="images/school/sch_03.png" alt="ATL"><span>ATL Setup</span></div>
+              <div class="ab-mega-card"><img src="images/school/sch_04.jpg" alt="Training"><span>Training</span></div>
+            </div>
+          </div>
+        </li>
+        <li class="ab-mega-item">
+          <a href="index.html#learning" class="ab-nav-link">Books <i class="fas fa-chevron-down"></i></a>
+          <div class="ab-mega-menu">
+            <div class="ab-mega-inner">
+              <div class="ab-mega-links">
+                <p class="ab-mega-heading">Books</p>
+                <a href="#"><i class="fas fa-code"></i> Coding Books</a>
+                <a href="#"><i class="fas fa-brain"></i> AI Books</a>
+                <a href="#"><i class="fab fa-python"></i> Python Books</a>
+                <a href="#"><i class="fas fa-robot"></i> Robotics Books</a>
+              </div>
+              <div class="ab-mega-card"><img src="images/ecosystem/codi.png" alt="Coding"><span>Coding</span></div>
+              <div class="ab-mega-card"><img src="images/ecosystem/aihai.png" alt="AI"><span>AI</span></div>
+              <div class="ab-mega-card"><img src="images/ecosystem/robo.png" alt="Robotics"><span>Robotics</span></div>
+              <div class="ab-mega-card"><img src="images/ecosystem/neur.png" alt="Neuro"><span>Neurotech</span></div>
+            </div>
+          </div>
+        </li>
+        <li class="ab-mega-item">
+          <a href="services.html" class="ab-nav-link">Impact <i class="fas fa-chevron-down"></i></a>
+          <div class="ab-mega-menu">
+            <div class="ab-mega-inner">
+              <div class="ab-mega-links">
+                <p class="ab-mega-heading">Impact</p>
+                <a href="#"><i class="fas fa-trophy"></i> Hackathons</a>
+                <a href="#"><i class="fas fa-handshake"></i> Collaboration</a>
+                <a href="#"><i class="fas fa-chart-line"></i> Achievements</a>
+                <a href="#"><i class="fas fa-users"></i> Community</a>
+              </div>
+              <div class="ab-mega-card"><img src="images/journey/AICTE.png" alt="AICTE"><span>AICTE</span></div>
+              <div class="ab-mega-card"><img src="images/journey/istart.png" alt="iStart"><span>iStart</span></div>
+              <div class="ab-mega-card"><img src="images/journey/MeityStartup.png" alt="Meity"><span>Meity</span></div>
+              <div class="ab-mega-card"><img src="images/journey/summit.png" alt="Summit"><span>AI Summit</span></div>
+            </div>
+          </div>
+        </li>
+        <li class="ab-mega-item">
+          <a href="index.html#demo" class="ab-nav-link">Shop <i class="fas fa-chevron-down"></i></a>
+          <div class="ab-mega-menu">
+            <div class="ab-mega-inner">
+              <div class="ab-mega-links">
+                <p class="ab-mega-heading">Shop</p>
+                <a href="#"><i class="fas fa-box"></i> Kits</a>
+                <a href="#"><i class="fas fa-graduation-cap"></i> Courses</a>
+                <a href="#"><i class="fas fa-book"></i> Books</a>
+                <a href="#"><i class="fas fa-tags"></i> Bundles</a>
+              </div>
+              <div class="ab-mega-card"><img src="images/ecosystem/class4.png" alt="Kit1"><span>Nano Kit</span></div>
+              <div class="ab-mega-card"><img src="images/ecosystem/class5.png" alt="Kit2"><span>Smart Kit</span></div>
+              <div class="ab-mega-card"><img src="images/ecosystem/same.png" alt="Kit4"><span>Robotics Kit</span></div>
+              <div class="ab-mega-card"><img src="images/ecosystem/dron.png" alt="Drone"><span>Drone Kit</span></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="ab-nav-right">
+        <a href="index.html#demo" class="ab-btn-signin">Book Demo</a>
+        <div class="ab-account">
+          <div class="ab-account-icon"><i class="fa-solid fa-user"></i></div>
+          <p>My Account</p>
+        </div>
+        <button class="ab-hamburger" id="abHamburger"
+          onclick="document.getElementById('abNavMenu').classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h1>Future Skills for Future Innovators</h1>
+        <p>Brain Up Labs empowers the next generation through hands-on learning in AI, Robotics, IoT, Coding, Aerospace,
+          Neuroscience, and STEM—building future-ready innovators with creativity, critical thinking, and real-world
+          problem-solving skills.</p>
+      </div>
+      <div class="hero-img">
+        <img src="images/hero/rectangle-design about.png" alt="Kids learning robotics">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT PARAGRAPH -->
+  <section class="about-para">
+    <div class="container">
+      <p>Brain Up Labs was founded with a vision to transform education through innovation and experiential learning. We
+        believe every student has the potential to become an innovator when given the right opportunities. By combining
+        AI, Robotics, IoT, Coding, Aerospace, Neuroscience, and STEM with hands-on, project-based learning, we inspire
+        curiosity, creativity, critical thinking, and real-world problem-solving. Our mission is to empower the next
+        generation with the skills and confidence to create meaningful solutions and shape a better future.</p>
+    </div>
+  </section>
+
+  <!-- SUPPORTED BY -->
+  <section class="supported">
+    <div class="container">
+      <h2 class="section-title">Supported By</h2>
+      <div class="supported-logos">
+        <img src="images/journey/istart.png" alt="ARTPARK">
+        <img src="images/journey/Sidbi.avif" alt="Startups Rajasthan">
+        <img src="images/journey/MeityStartup.png" alt="IISc">
+        <img src="images/journey/acic.jpeg" alt="Rajasthan Government">
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <div class="container">
+      <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80" alt="Classroom">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="Kids coding">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&q=80" alt="Robotics event">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&q=80" alt="Award ceremony">
+        <img src="https://images.unsplash.com/photo-1596496181848-3091d4878b24?w=500&q=80" alt="Workshop">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80" alt="Team event">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2022 JOURNEY -->
+  <!-- <section class="journey">
+    <div class="container">
+      <h2 class="section-title">Looking to the future: Our 2022 Journey</h2>
+      <div class="journey-videos">
+        <div class="video-placeholder">▶ Video</div>
+        <div class="video-placeholder">▶ Video</div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- FOUNDERS -->
+  <section class="founders-section">
+    <div class="container">
+      <h2 class="section-title">Brainuplabs Founders</h2>
+      <p class="founders-intro">At Brain Up Labs, we are committed to redefining education by creating a connected
+        learning ecosystem where innovation meets practical experience. Our diverse team of innovators, engineers,
+        educators, designers, technology enthusiasts, and business professionals collaborates to develop meaningful
+        learning solutions that inspire curiosity, nurture critical thinking, and prepare students with the skills
+        needed to excel in a rapidly evolving world.</p>
+
+      <div class="founders-grid">
+        <div class="person-card">
+          <img src="images/character/vibhas.png" alt="Vibhas Mahaldar">
+          <h3>Vibhas Mahaldar</h3>
+          <p>Founder &amp; Chief Executive Officer</p>
+          <a href="https://www.linkedin.com/in/vibhas-mahaldar-4a8607219/" target="_blank" rel="noopener noreferrer">
+            <span class="linkedin-icon">in</span>
+          </a>
+        </div>
+        <div class="person-card">
+          <img src="images/character/ram.png" alt="Ram Agarwal">
+          <h3>Ram Agarwal</h3>
+          <p>Co-founder &amp; Chief Financial Officer</p>
+          <a href="https://www.linkedin.com/in/ram-agarwal-38371b327/" target="_blank" rel="noopener noreferrer">
+            <span class="linkedin-icon">in</span>
+          </a>
+        </div>
+        <div class="person-card">
+          <img src="images/character/pari.png" alt="Pari Soni">
+          <h3>Kanika Soni</h3>
+          <p>Co-fuunder &amp; Chief Operating Officer</p>
+          <a href="https://www.linkedin.com/in/pari-soni-412559328/" target="_blank" rel="noopener noreferrer">
+            <span class="linkedin-icon">in</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVISORS -->
+  <section class="team-section">
+    <div class="container">
+      <h2 class="section-title">BrainUpLabs Advisors</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="images/Team_image/GAURAV.png" alt="Gaurav Sharma">
+          <h4>Gaurav Sharma</h4>
+          <p>CEO,ACIC-VGU</p>
+          <a href="https://www.linkedin.com/in/gauravsharmactr1/" target="_blank" rel="noopener noreferrer">
+            <span class="linkedin-icon">in</span>
+          </a>
+        </div>
+        <div class="team-card">
+          <img src="images/Team_image/SATISH .png" alt="Satish Jangid">
+          <h4>Satish Jangid</h4>
+          <p>Director,ACIC-VGU</p>
+          <a href="https://www.linkedin.com/in/gauravsharmactr1" target="_blank" rel="noopener noreferrer">
+            <span class="linkedin-icon">in</span>
+          </a>
+        </div>
+        <div class="team-card">
+          <img src="images/Team_image/sourav.png" alt="Sourav Gautam">
+          <h4>Sourav Gautam</h4>
+          <p>COO,ACIC-VGU</p>
+          <a href="https://www.linkedin.com/in/gauravsharmactr1" target="_blank" rel="noopener noreferrer">
+            <span class="linkedin-icon">in</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP TEAM -->
+  <!-- <section class="team-section bg-tint">
+    <div class="container">
+      <h2 class="section-title">STEMpedia Leadership Team</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Swapnil Kumar">
+          <h4>Swapnil Kumar</h4>
+          <p>Head, Business Development &amp; Partnerships</p>
+          <span class="linkedin-icon">in</span>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Alok Singh">
+          <h4>Alok Singh</h4>
+          <p>Head, Education &amp; Programs</p>
+          <span class="linkedin-icon">in</span>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Nisheet Srivastava">
+          <h4>Nisheet Srivastava</h4>
+          <p>Head, Product Design</p>
+          <span class="linkedin-icon">in</span>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/63.jpg" alt="Samyak Sanghvi">
+          <h4>Samyak Sanghvi</h4>
+          <p>Consultant, Finance</p>
+          <span class="linkedin-icon">in</span>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Vikas Pandey">
+          <h4>Vikas Pandey</h4>
+          <p>Head, Product Growth &amp; Marketing</p>
+          <span class="linkedin-icon">in</span>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Jaydip Savaliya">
+          <h4>Jaydip Savaliya</h4>
+          <p>Head, Manufacturing &amp; QA</p>
+          <span class="linkedin-icon">in</span>
+        </div>
+        <div class="team-card">
+          <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Harishankar Verma">
+          <h4>Harishankar Verma</h4>
+          <p>Head, Supply Chain</p>
+          <span class="linkedin-icon">in</span>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- DYNAMIC TEAM VIDEO -->
+  <section class="dynamic-team">
+    <div class="container">
+      <h2 class="section-title">Meet Our Dynamic Team in Action</h2>
+
+      <div class="team-image">
+        <img src="images/Team_image/allmem.jpeg" alt="Dynamic Team">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <!-- <section class="media-section">
+    <div class="container">
+      <h2 class="section-title">BrainUpLabs in Media</h2>
+      <div class="media-grid">
+        <div class="media-item">
+          <div class="video-placeholder">▶ Video</div>
+          <p>Watch the BrainUpLabs at CES 2020, where our CEO talked about how technology is important for making the young minds future ready!</p>
+        </div>
+        <div class="media-item">
+          <div class="video-placeholder">▶ Video</div>
+          <p>brainuplabs product got featured in DD News on National Technology Day 2023 celebrated at Delhi Constitutional Club.</p>
+        </div>
+        <div class="media-item">
+          <div class="video-placeholder">▶ Video</div>
+          <p>brainuplabs got featured in Amazon Smbhav India, a partnership with NITI AAYOG and powered by Times Network.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section id="instagram-feed" class="instagram-section" aria-label="Instagram Feed">
+    <div class="instagram-section__header">
+      <h2>Follow Us on Instagram</h2>
+      <p>@brainup_labs</p>
+    </div>
+
+    <!--
+        INSTAGRAM EMBEDS CONTAINER
+        Add more posts by copying a .instagram-embed-item block
+        and replacing the blockquote's data-instgrm-permalink URL
+        with the real Instagram post/reel permalink.
+      -->
+    <div class="instagram-grid" id="instagram-grid">
+
+      <div class="instagram-embed-item">
+        <iframe src="https://www.instagram.com/reel/DTQa2KBknRE/embed/" frameborder="0" scrolling="no"
+          allowtransparency="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <a href="https://www.instagram.com/brainup_labs/" target="_blank" rel="noopener noreferrer"
+          class="ig-view-profile">View Profile</a>
+      </div>
+
+      <div class="instagram-embed-item">
+        <iframe src="https://www.instagram.com/reel/DXTa70xDAtX/embed/" frameborder="0" scrolling="no"
+          allowtransparency="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <a href="https://www.instagram.com/brainup_labs/" target="_blank" rel="noopener noreferrer"
+          class="ig-view-profile">View Profile</a>
+      </div>
+
+      <div class="instagram-embed-item">
+        <iframe src="https://www.instagram.com/reel/DXTt-zSifUr/embed/" frameborder="0" scrolling="no"
+          allowtransparency="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <a href="https://www.instagram.com/brainup_labs/" target="_blank" rel="noopener noreferrer"
+          class="ig-view-profile">View Profile</a>
+      </div>
+
+      <div class="instagram-embed-item">
+        <iframe src="https://www.instagram.com/reel/DYAIIBFpDPg/embed/" frameborder="0" scrolling="no"
+          allowtransparency="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <a href="https://www.instagram.com/brainup_labs/" target="_blank" rel="noopener noreferrer"
+          class="ig-view-profile">View Profile</a>
+      </div>
+
+
+
+
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="awards-section">
+    <div class="container">
+      <h2 class="section-title">Awards and Recognitions</h2>
+      <p class="awards-intro">Leading the Way, our impact is recognized globally with Prestigious Awards and Accolades.
+      </p>
+      <div class="badge-row">
+        <img src="images/journey/AICTE.png" alt="GESS Awards">
+        <img src="images/journey/doit_c.png" alt="NASSCOM">
+        <img src="images/journey/istart.png" alt="XR Startup Program">
+        <img src="images/journey/MeityStartup.png" alt="GESS Winner">
+        <img src="images/journey/acic.jpeg" alt="QS Reimagine Education Award">
+      </div>
+      <div class="badge-row">
+        <img src="images/journey/msme.png" alt="QS Reimagine Education Award">
+        <img src="images/journey/Sidbi.avif" alt="TiE Global">
+        <img src="images/journey/tie.png" alt="TC100 Emerging Startups">
+        <img src="images/journey/DPIIT.jpeg" alt="Education Summit Awards">
+
+      </div>
+      <div class="badge-row">
+        <img src="images/journey/summit.png" alt="QS Reimagine Education Award">
+        <!-- <img src="images/journey/Sidbi.avif" alt="TiE Global">
+        <img src="images/journey/tie.png" alt="TC100 Emerging Startups">
+        <img src="images/journey/DPIIT.jpeg" alt="Education Summit Awards"> -->
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero
+    gsap.from(".hero-text h1", { opacity: 0, y: 50, duration: 1, ease: "power3.out", delay: 0.2 });
+    gsap.from(".hero-text p", { opacity: 0, y: 30, duration: 0.9, ease: "power3.out", delay: 0.45 });
+    gsap.from(".hero-img img", { opacity: 0, scale: 0.9, duration: 1, ease: "back.out(1.3)", delay: 0.3 });
+
+    // About para
+    gsap.from(".about-para p", {
+      scrollTrigger: { trigger: ".about-para", start: "top 85%" },
+      opacity: 0, y: 30, duration: 0.8, ease: "power2.out"
+    });
+
+    // Supported logos
+    gsap.utils.toArray(".supported-logos img").forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: "top 90%" },
+        opacity: 0, y: 20, duration: 0.6, delay: i * 0.1, ease: "power2.out"
+      });
+    });
+
+    // Gallery
+    gsap.utils.toArray(".gallery-grid img").forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: "top 90%" },
+        opacity: 0, scale: 0.88, duration: 0.7, delay: i * 0.07, ease: "back.out(1.2)"
+      });
+    });
+
+    // Section titles
+    gsap.utils.toArray(".section-title").forEach(el => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: "top 88%" },
+        opacity: 0, y: 25, duration: 0.7, ease: "power2.out"
+      });
+    });
+
+    // Founders
+    gsap.utils.toArray(".person-card").forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: "top 88%" },
+        opacity: 0, y: 40, duration: 0.8, delay: i * 0.15, ease: "back.out(1.3)"
+      });
+    });
+
+    // Team cards
+    gsap.utils.toArray(".team-card").forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: "top 90%" },
+        opacity: 0, y: 30, duration: 0.7, delay: i * 0.1, ease: "power3.out"
+      });
+    });
+
+    // Awards badges
+    gsap.utils.toArray(".badge-row img").forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: "top 90%" },
+        opacity: 0, scale: 0.8, duration: 0.6, delay: i * 0.08, ease: "back.out(1.4)"
+      });
+    });
+
+    // Instagram embeds
+    gsap.utils.toArray(".instagram-embed-item").forEach((el, i) => {
+      gsap.from(el, {
+        scrollTrigger: { trigger: el, start: "top 90%" },
+        opacity: 0, y: 30, duration: 0.7, delay: i * 0.1, ease: "power2.out"
+      });
+    });
+
+    // Team image
+    gsap.from(".team-image img", {
+      scrollTrigger: { trigger: ".team-image", start: "top 80%" },
+      opacity: 0, scale: 0.93, duration: 1, ease: "power3.out"
+    });
+  </script>
+</body>
