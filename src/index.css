@@ -123,6 +123,7 @@ html {
   /* kfs-item */
 }
 
+@layer base {
 *,
 *::before,
 *::after {
@@ -171,7 +172,9 @@ select,
 textarea {
   font-family: var(--font-main);
 }
+}
 
+@layer components {
 .text-blueS {
   color: #0D1044
 }
@@ -5645,4 +5648,5 @@ body {
   .support {
     padding: 30px 0;
   }
+}
 }

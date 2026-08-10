@@ -38,7 +38,7 @@ export default function Navbar() {
               <div className="mega-links">
                 <p className="mega-heading">School Programs</p>
                 <a href="/school-programs/labs"><i className="fas fa-flask"></i> Labs</a>
-                <a href="#"><i className="fas fa-book-open"></i> Curriculum & Books</a>
+                <a href="/school-programs/books"><i className="fas fa-book-open"></i> Books</a>
                 <a href="#"><i className="fas fa-school"></i> ATL Labs</a>
                 <a href="#"><i className="fas fa-chalkboard-teacher"></i> Teacher Training</a>
               </div>

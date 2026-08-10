@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import { Sparkles, CheckCircle2, Rocket, BrainCircuit, Bot, Cpu, School, ArrowRight } from 'lucide-react';
-import Book from '../components/Labs/Book';
+import Book from '../../components/Labs/Book';
 import './Labs.css';
 
 const labItems = [
