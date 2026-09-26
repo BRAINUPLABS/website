@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Sparkles, ArrowRight } from 'lucide-react';
-import './Books.css';
 import Book1 from '../../assets/Books/1.png';
 import Book2 from '../../assets/Books/2.png';
 import Book3 from '../../assets/Books/3.png';
@@ -63,30 +62,30 @@ const Books = () => {
   };
 
   return (
-    <div className="labs-page">
+    <div className="bg-[#0D1117] min-h-screen font-sans pb-16">
       {/* Hero Section */}
-      <section className="labs-hero">
-        <div className="labs-hero-bg"></div>
-        <div className="labs-hero-content">
-          <div className="labs-badge">
+      <section className="relative bg-[#0D1117] text-white pt-20 px-5 pb-24 overflow-hidden text-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0c709a]/20 to-[#FF822E]/20 z-0 pointer-events-none"></div>
+        <div className="relative z-10 max-w-[800px] mx-auto">
+          <div className="inline-flex items-center gap-2 bg-white/5 text-[#7dd4f7] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10 shadow-[0_0_20px_rgba(125,212,247,0.2)] mb-5 backdrop-blur-md">
             <Sparkles size={14} /> School Programs
           </div>
-          <h1 className="labs-hero-title">
-            Next-Generation <span className="labs-hero-highlight">STEM Books</span>
+          <h1 className="font-['Space_Grotesk'] text-[clamp(2rem,4vw,3.5rem)] font-extrabold mb-5 leading-[1.1] tracking-tight">
+            Next-Generation <span className="bg-gradient-to-r from-[#FF822E] to-[#fcc55a] text-transparent bg-clip-text">STEM Books</span>
           </h1>
-          <p className="labs-hero-desc">
+          <p className="text-base text-gray-300 leading-relaxed max-w-[600px] mx-auto">
             Empower your school with cutting-edge infrastructure. From Robotics and AI to IoT and SpaceTech, we design comprehensive books tailored for all grade levels.
           </p>
         </div>
-        <div className="labs-shape-1"></div>
-        <div className="labs-shape-2"></div>
+        <div className="absolute top-0 left-[10%] w-[300px] h-[300px] rounded-full blur-[120px] pointer-events-none z-0 bg-[#0c709a] opacity-20"></div>
+        <div className="absolute bottom-0 right-[10%] w-[300px] h-[300px] rounded-full blur-[120px] pointer-events-none z-0 bg-[#FF822E] opacity-20"></div>
       </section>
 
       {/* Main content grid. Using light-gray background like in the image. */}
-      <div className="w-full mt-10 rounded-2xl p-5 shadow-inner">
+      <div className="w-full mt-[-60px] relative z-20 rounded-2xl p-5 shadow-inner">
         
         {/* Top area for books and labels */}
-        <section className="flex w-full px-4 md:px-10 overflow-hidden mt-8">
+        <section className="flex w-full px-4 md:px-10 overflow-hidden mt-8 max-w-[1200px] mx-auto bg-white/5 backdrop-blur-sm rounded-3xl p-5 border border-white/10">
           
           {/* LEFT COLUMN (LEGEND) - Row Labels */}
           {/* Aligned to start from top with no image */}
@@ -94,10 +93,10 @@ const Books = () => {
             {/* An empty div to align with the top books section */}
             <div className="w-full h-[100px] md:h-[120px]"></div>
             
-            <span className={`${rowHeaderBase} ${rowHeights.h_classesCovered}`}>Classes Covered</span>
-            <span className={`${rowHeaderBase} ${rowHeights.h_skillsCovered}`}>Skills Covered</span>
-            <span className={`${rowHeaderBase} ${rowHeights.h_infrastructureRequired}`}>Infrastructure Required</span>
-            <span className={`${rowHeaderBase} ${rowHeights.h_sessionsRequired}`}>Sessions Required</span>
+            <span className={`${rowHeaderBase} ${rowHeights.h_classesCovered} !bg-[#FF822E] !text-[#0D1117]`}>Classes Covered</span>
+            <span className={`${rowHeaderBase} ${rowHeights.h_skillsCovered} !bg-[#FF822E] !text-[#0D1117]`}>Skills Covered</span>
+            <span className={`${rowHeaderBase} ${rowHeights.h_infrastructureRequired} !bg-[#FF822E] !text-[#0D1117]`}>Infrastructure Required</span>
+            <span className={`${rowHeaderBase} ${rowHeights.h_sessionsRequired} !bg-[#FF822E] !text-[#0D1117]`}>Sessions Required</span>
           </div>
 
           {/* RIGHT COLUMN (SCROLLING BOOKS AND DATA) */}
@@ -110,25 +109,25 @@ const Books = () => {
                   {/* The actual 3D, angled book illustration */}
                     <img 
                       src={book.coverImg} 
-                      alt={book.title} 
+                      alt="Book Cover" 
                       className="h-full object-contain drop-shadow-lg"
                     />
                   </div>
                 
                 {/* Data Cells matching exact reference values */}
-                <span className={`${dataCellBase} ${rowHeights.h_classesCovered}`} style={{ backgroundColor: `color-mix(in srgb, ${book.color} 15%, var(--bg))` }}>
+                <span className={`${dataCellBase} ${rowHeights.h_classesCovered} text-[#0D1117]`} style={{ backgroundColor: `color-mix(in srgb, ${book.color} 15%, var(--bg))` }}>
                   {book.classesCovered}
                 </span>
                 
-                <span className={`${dataCellBase} ${rowHeights.h_skillsCovered}`} style={{ backgroundColor: `color-mix(in srgb, ${book.color} 15%, var(--bg))` }}>
+                <span className={`${dataCellBase} ${rowHeights.h_skillsCovered} text-[#0D1117]`} style={{ backgroundColor: `color-mix(in srgb, ${book.color} 15%, var(--bg))` }}>
                   {book.skillsCovered}
                 </span>
                 
-                <span className={`${dataCellBase} ${rowHeights.h_infrastructureRequired}`} style={{ backgroundColor: `color-mix(in srgb, ${book.color} 15%, var(--bg))` }}>
+                <span className={`${dataCellBase} ${rowHeights.h_infrastructureRequired} text-[#0D1117]`} style={{ backgroundColor: `color-mix(in srgb, ${book.color} 15%, var(--bg))` }}>
                   {book.infrastructureRequired}
                 </span>
                 
-                <span className={`${dataCellBase} ${rowHeights.h_sessionsRequired}`} style={{ backgroundColor: `color-mix(in srgb, ${book.color} 15%, var(--bg))` }}>
+                <span className={`${dataCellBase} ${rowHeights.h_sessionsRequired} text-[#0D1117]`} style={{ backgroundColor: `color-mix(in srgb, ${book.color} 15%, var(--bg))` }}>
                   {book.sessionsRequired}
                 </span>
 
@@ -139,18 +138,18 @@ const Books = () => {
       </div>
 
       {/* Bottom CTA */}
-      <section className="labs-cta-section mt-10">
-        <div className="labs-cta-box">
-          <div className="labs-cta-bg"></div>
-          <div className="labs-cta-content">
-            <h2 className="labs-cta-title">Ready to transform your school?</h2>
-            <p className="labs-cta-desc">Partner with Brain Up Labs to build a future-ready learning ecosystem for your students.</p>
-            <button onClick={(e) => { e.preventDefault(); setSelectedLabId(""); setShowModal(true); }} className="labs-cta-btn">
+      <section className="max-w-[1200px] mx-auto mt-14 px-5">
+        <div className="bg-gradient-to-r from-[#0D1117] to-[#161B27] rounded-[28px] py-10 px-7 text-center text-white relative overflow-hidden shadow-[0_12px_30px_rgba(0,0,0,0.15)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(12,112,154,0.4),transparent)] opacity-50"></div>
+          <div className="relative z-10">
+            <h2 className="font-['Space_Grotesk'] text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">Ready to transform your school?</h2>
+            <p className="text-base text-gray-300 max-w-[500px] mx-auto mb-7 leading-relaxed">Partner with Brain Up Labs to build a future-ready learning ecosystem for your students.</p>
+            <button onClick={(e) => { e.preventDefault(); setSelectedLabId(""); setShowModal(true); }} className="inline-flex items-center gap-2 bg-[#FF822E] text-white px-6 py-3 rounded-full font-bold text-base transition-all duration-300 hover:bg-[#d96318] hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(255,130,46,0.3)]">
               Book a Free Consultation <ArrowRight size={18} />
             </button>
           </div>
-          <div className="labs-cta-shape-1"></div>
-          <div className="labs-cta-shape-2"></div>
+          <div className="absolute top-[-40px] right-[-40px] w-[200px] h-[200px] bg-[#0c709a] rounded-full blur-[80px] opacity-30 z-0 pointer-events-none"></div>
+          <div className="absolute bottom-[-40px] left-[-40px] w-[200px] h-[200px] bg-[#FF822E] rounded-full blur-[80px] opacity-30 z-0 pointer-events-none"></div>
         </div>
       </section>
     </div>

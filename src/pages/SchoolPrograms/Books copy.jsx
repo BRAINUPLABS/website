@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Sparkles, CheckCircle2, Rocket, BrainCircuit, Bot, Cpu, School, ArrowRight } from 'lucide-react';
 import Book from '../../components/Labs/Book';
-import './Books.css';
 
 const bookItems = [
   {
@@ -43,60 +42,65 @@ const bookItems = [
 ];
 
 const Books = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedLabId, setSelectedLabId] = useState("");
+
   return (
-    <div className="labs-page">
+    <div className="bg-[#0D1117] min-h-screen font-sans pb-16">
       {/* Hero Section */}
-      <section className="labs-hero">
-        <div className="labs-hero-bg"></div>
-        <div className="labs-hero-content">
-          <div className="labs-badge">
+      <section className="relative bg-[#0D1117] text-white pt-20 px-5 pb-24 overflow-hidden text-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0c709a]/20 to-[#FF822E]/20 z-0 pointer-events-none"></div>
+        <div className="relative z-10 max-w-[800px] mx-auto">
+          <div className="inline-flex items-center gap-2 bg-white/5 text-[#7dd4f7] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10 shadow-[0_0_20px_rgba(125,212,247,0.2)] mb-5 backdrop-blur-md">
             <Sparkles size={14} /> School Programs
           </div>
-          <h1 className="labs-hero-title">
-            Next-Generation <span className="labs-hero-highlight">STEM Books</span>
+          <h1 className="font-['Space_Grotesk'] text-[clamp(2rem,4vw,3.5rem)] font-extrabold mb-5 leading-[1.1] tracking-tight">
+            Next-Generation <span className="bg-gradient-to-r from-[#FF822E] to-[#fcc55a] text-transparent bg-clip-text">STEM Books</span>
           </h1>
-          <p className="labs-hero-desc">
+          <p className="text-base text-gray-300 leading-relaxed max-w-[600px] mx-auto">
             Empower your school with cutting-edge infrastructure. From Robotics and AI to IoT and SpaceTech, we design comprehensive books tailored for all grade levels.
           </p>
         </div>
 
         {/* Abstract Background Shapes */}
-        <div className="labs-shape-1"></div>
-        <div className="labs-shape-2"></div>
+        <div className="absolute top-0 left-[10%] w-[300px] h-[300px] rounded-full blur-[120px] pointer-events-none z-0 bg-[#0c709a] opacity-20"></div>
+        <div className="absolute bottom-0 right-[10%] w-[300px] h-[300px] rounded-full blur-[120px] pointer-events-none z-0 bg-[#FF822E] opacity-20"></div>
       </section>
 
       <section className="flex w-full px-10">
-        <div>
-
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 scroll-x-auto p-10">
+        <div></div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 overflow-x-auto p-10">
           {bookItems.map((book, idx) => (
-            <div key={book.idx} className={`flex flex-col items-center justify-between gap-2 bg-[${book.color}] rounded-lg`}>
-              <img src={book.img} alt={book.title} />
-              <span className={`bg-[${book.color}] rounded-lg px-2 py-1 text-center text-sm`}>{book.designedFor}</span>
-              <span className={`bg-[${book.color}] rounded-lg px-2 py-1 text-center text-sm`}>{book.conceptsCovered}</span>
-              <span className={`bg-[${book.color}] rounded-lg px-2 py-1 text-center text-sm`}>{book.infrastructureRequired}</span>
-              <span className={`bg-[${book.color}] rounded-lg px-2 py-1 text-center text-sm`}>{book.sessionRequired}</span>
+            <div key={book.idx} className="flex flex-col items-center justify-between gap-2 rounded-lg" style={{ backgroundColor: book.color }}>
+              <img src={book.img} alt="Book" />
+              <span className="rounded-lg px-2 py-1 text-center text-sm" style={{ backgroundColor: book.color }}>{book.designedFor}</span>
+              <span className="rounded-lg px-2 py-1 text-center text-sm" style={{ backgroundColor: book.color }}>{book.conceptsCovered}</span>
+              <span className="rounded-lg px-2 py-1 text-center text-sm" style={{ backgroundColor: book.color }}>{book.infrastructureRequired}</span>
+              <span className="rounded-lg px-2 py-1 text-center text-sm" style={{ backgroundColor: book.color }}>{book.sessionRequired}</span>
             </div>
           ))}
         </div>
       </section>
 
       {/* Bottom CTA */}
-      <section className="labs-cta-section">
-        <div className="labs-cta-box">
-          <div className="labs-cta-bg"></div>
-          <div className="labs-cta-content">
-            <h2 className="labs-cta-title">Ready to transform your school?</h2>
-            <p className="labs-cta-desc">Partner with Brain Up Labs to build a future-ready learning ecosystem for your students.</p>
-            <button onClick={(e) => { e.preventDefault(); setSelectedLabId(""); setShowModal(true); }} className="labs-cta-btn">
+      <section className="max-w-[1200px] mx-auto mt-14 px-5">
+        <div className="bg-gradient-to-r from-[#0D1117] to-[#161B27] rounded-[28px] py-10 px-7 text-center text-white relative overflow-hidden shadow-[0_12px_30px_rgba(0,0,0,0.15)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(12,112,154,0.4),transparent)] opacity-50"></div>
+          <div className="relative z-10">
+            <h2 className="font-['Space_Grotesk'] text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">Ready to transform your school?</h2>
+            <p className="text-base text-gray-300 max-w-[500px] mx-auto mb-7 leading-relaxed">Partner with Brain Up Labs to build a future-ready learning ecosystem for your students.</p>
+            <button onClick={(e) => { e.preventDefault(); setSelectedLabId(""); setShowModal(true); }} className="inline-flex items-center gap-2 bg-[#FF822E] text-white px-6 py-3 rounded-full font-bold text-base transition-all duration-300 hover:bg-[#d96318] hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(255,130,46,0.3)]">
               Book a Free Consultation <ArrowRight size={18} />
             </button>
           </div>
-          <div className="labs-cta-shape-1"></div>
-          <div className="labs-cta-shape-2"></div>
+          <div className="absolute top-[-40px] right-[-40px] w-[200px] h-[200px] bg-[#0c709a] rounded-full blur-[80px] opacity-30 z-0 pointer-events-none"></div>
+          <div className="absolute bottom-[-40px] left-[-40px] w-[200px] h-[200px] bg-[#FF822E] rounded-full blur-[80px] opacity-30 z-0 pointer-events-none"></div>
         </div>
       </section>
+      
+      {showModal && (
+        <Book setShowModal={setShowModal} selectedLabs={selectedLabId} />
+      )}
     </div>
   )
 }

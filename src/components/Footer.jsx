@@ -120,11 +120,11 @@ const SOCIAL_LINKS = [
 
 const FooterSection = ({ title, links }) => (
   <>
-    <h3>{title}</h3>
-    <ul>
+    <h3 className="text-lg font-bold mb-4 text-white">{title}</h3>
+    <ul className="flex flex-col gap-3">
       {links.map((link, index) => (
         <li key={index}>
-          <a href={link.href}>{link.label}</a>
+          <a href={link.href} className="text-gray-400 hover:text-[#FF822E] text-sm transition-colors">{link.label}</a>
         </li>
       ))}
     </ul>
@@ -133,53 +133,53 @@ const FooterSection = ({ title, links }) => (
 
 export default function Footer() {
   return (
-    <footer className="site-footer">
-      <div className="footer-container">
+    <footer className="bg-[#0a0f1e] text-white pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6">
         
         {/* Brand & Social Row */}
-        <div className="footer-brand-row">
-          <div className="footer-brand">
-            <h2 className="footer-logo">Brainup Labs</h2>
-            <p className="footer-tagline">Empowering the next generation with AI & Robotics.</p>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-3xl font-bold">Brainup Labs</h2>
+            <p className="text-gray-400 text-sm">Empowering the next generation with AI & Robotics.</p>
           </div>
-          <div className="social-icons">
+          <div className="flex gap-4">
             {SOCIAL_LINKS.map((social, idx) => (
-              <a key={idx} href={social.href} aria-label={social.label} className="social-icon">
+              <a key={idx} href={social.href} aria-label={social.label} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-300 hover:bg-[#FF822E] hover:text-white transition-all">
                 <i className={social.icon}></i>
               </a>
             ))}
           </div>
         </div>
 
-        <hr className="footer-main-divider" />
+        <hr className="border-white/10 my-10" />
 
         {/* Links Grid */}
-        <div className="footer-links-grid">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {FOOTER_COLUMNS.map((column, colIndex) => (
-            <div className="footer-col" key={colIndex}>
+            <div className="flex flex-col gap-8" key={colIndex}>
               {column.map((section, secIndex) => (
-                <div className="footer-section" key={secIndex}>
+                <div key={secIndex}>
                   <FooterSection title={section.title} links={section.links} />
                 </div>
               ))}
             </div>
           ))}
           {/* Contact Column */}
-          <div className="footer-col">
-            <div className="footer-section">
+          <div className="flex flex-col gap-8">
+            <div>
               <FooterSection title="Get in Touch" links={CONTACT_LINKS} />
             </div>
           </div>
         </div>
 
-        <hr className="footer-main-divider" />
+        <hr className="border-white/10 my-10" />
 
         {/* Bottom Bar */}
-        <div className="footer-bottom-row">
-          <p className="copyright">&copy; {new Date().getFullYear()} Brainup Labs. All rights reserved.</p>
-          <div className="funded-badge">
-            <span className="funded-label">FUNDED WITH</span>
-            <span className="funded-name">MeityStartup & NSUT</span>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 mt-10">
+          <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} Brainup Labs. All rights reserved.</p>
+          <div className="flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full">
+            <span className="text-xs font-bold text-gray-400 tracking-wider">FUNDED WITH</span>
+            <span className="text-sm font-semibold text-white">MeityStartup & NSUT</span>
           </div>
         </div>
 

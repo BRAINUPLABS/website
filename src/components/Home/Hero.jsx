@@ -1,40 +1,40 @@
 export default function Hero() {
   return (
-    <section className="hero" id="hero">
-    <div className="hero-bg-gradient"></div>
-    <div className="hero-particles" id="heroParticles"></div>
-    <div className="hero-container">
-      <div className="hero-left">
-        <div className="hero-badge">🧠 Future-Ready Education Platform</div>
-        <h1 className="hero-heading">
-          Unlock the <span className="hero-highlight">Future of</span>
+    <section className="min-h-[90vh] relative overflow-hidden flex items-center bg-gradient-to-br from-[#fff8f0] via-[#fff] to-[#fff8f5] pt-[60px] pb-[40px] flex-col lg:flex-row lg:pt-[60px]" id="hero">
+    <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_70%_at_70%_50%,_rgba(30,79,216,0.07)_0%,_transparent_60%),radial-gradient(ellipse_50%_50%_at_20%_80%,_rgba(255,107,53,0.07)_0%,_transparent_60%)]"></div>
+    <div className="absolute inset-0 pointer-events-none overflow-hidden" id="heroParticles"></div>
+    <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center relative z-10">
+      <div className="">
+        <div className="inline-flex items-center gap-[6px] bg-gradient-to-br from-[rgba(30,79,216,0.1)] to-[rgba(74,127,255,0.1)] text-[#0c709a] border border-[rgba(30,79,216,0.2)] text-[0.8rem] font-bold py-[6px] px-[16px] rounded-full mb-5 animate-[fadeInDown_0.6s_ease_forwards]">🧠 Future-Ready Education Platform</div>
+        <h1 className="font-['Space_Grotesk',_sans-serif] text-[clamp(2.4rem,5vw,4rem)] font-extrabold leading-[1.1] text-[#0D1117] mb-3 animate-[fadeInLeft_0.7s_0.1s_ease_both]">
+          Unlock the <span className="text-[#0c709a]">Future of</span>
         </h1>
-        <div className="hero-rotating-words">
-          <div className="word-list">
-            <span className="word active">Neuroscience</span>
-            <span className="word">Robotics</span>
-            <span className="word">IoT</span>
-            <span className="word">Neurotech</span>
-            <span className="word">Artificial Intelligence</span>
-            <span className="word">Aerospace</span>
+        <div className="min-h-[60px] overflow-hidden mb-5 animate-[fadeInLeft_0.7s_0.2s_ease_both]">
+          <div className="relative">
+            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-[#FF822E] absolute top-0 transition-all duration-500 ease-in-out leading-[1.2] opacity-100 translate-y-0 relative">Neuroscience</span>
+            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-[#FF822E] absolute top-0 opacity-0 translate-y-[30px] transition-all duration-500 ease-in-out leading-[1.2]">Robotics</span>
+            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-[#FF822E] absolute top-0 opacity-0 translate-y-[30px] transition-all duration-500 ease-in-out leading-[1.2]">IoT</span>
+            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-[#FF822E] absolute top-0 opacity-0 translate-y-[30px] transition-all duration-500 ease-in-out leading-[1.2]">Neurotech</span>
+            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-[#FF822E] absolute top-0 opacity-0 translate-y-[30px] transition-all duration-500 ease-in-out leading-[1.2]">Artificial Intelligence</span>
+            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-[#FF822E] absolute top-0 opacity-0 translate-y-[30px] transition-all duration-500 ease-in-out leading-[1.2]">Aerospace</span>
           </div>
         </div>
-        <p className="hero-sub">Empowering students with cutting-edge STEM skills through hands-on learning, real-world
+        <p className="text-[1.05rem] text-[#5C6B82] leading-[1.8] max-w-[480px] mb-8 animate-[fadeInLeft_0.7s_0.3s_ease_both]">Empowering students with cutting-edge STEM skills through hands-on learning, real-world
           projects, and industry-aligned curriculum.</p>
-        <div className="hero-cta-group">
-          <a href="#demo" className="btn-primary">Book Free Demo <i className="fas fa-arrow-right"></i></a>
-          <a href="#projects" className="btn-outline">Explore Projects <i className="fas fa-play-circle"></i></a>
+        <div className="flex items-center gap-4 flex-wrap mb-10 animate-[fadeInLeft_0.7s_0.4s_ease_both]">
+          <a href="#demo" className="group inline-flex items-center gap-2 bg-gradient-to-br from-[#0c709a] to-[#7dd4f7] text-white py-[14px] px-[28px] rounded-full text-[0.95rem] font-bold font-['Plus_Jakarta_Sans',_sans-serif] shadow-[0_6px_24px_rgba(30,79,216,0.35)] hover:-translate-y-[3px] hover:shadow-[0_12px_36px_rgba(30,79,216,0.45)] transition-all duration-[0.35s] ease-[cubic-bezier(.4,0,.2,1)]">Book Free Demo <i className="fas fa-arrow-right transition-transform duration-[0.35s] group-hover:translate-x-1"></i></a>
+          <a href="#projects" className="inline-flex items-center gap-2 text-[#0c709a] border-2 border-[rgba(30,79,216,0.25)] py-[12px] px-[24px] rounded-full text-[0.95rem] font-bold bg-transparent hover:bg-[rgba(30,79,216,0.06)] hover:border-[#0c709a] hover:-translate-y-[2px] transition-all duration-[0.35s] ease-[cubic-bezier(.4,0,.2,1)]">Explore Projects <i className="fas fa-play-circle"></i></a>
         </div>
       </div>
-      <div className="hero-right">
-        <div className="diag-collage">
-          <div className="diag-card diag-bottom">
+      <div className="hidden lg:flex justify-center items-center animate-[fadeInRight_0.8s_0.2s_ease_both]">
+        <div className="relative w-[420px] h-[460px] shrink-0">
+          <div className="absolute rounded-[22px] overflow-hidden border-[5px] border-white shadow-[0_12px_40px_rgba(0,0,0,0.18)] [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:block w-[240px] h-[290px] top-0 left-0 z-10 -rotate-4">
             <img src="/images/hero/img2.png" alt="Robotics" />
           </div>
-          <div className="diag-card diag-center">
+          <div className="absolute rounded-[22px] overflow-hidden border-[5px] border-white shadow-[0_12px_40px_rgba(0,0,0,0.18)] [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:block w-[200px] h-[240px] top-[30px] right-0 z-20 rotate-3">
             <img src="/images/hero/img1.png" alt="AI" />
           </div>
-          <div className="diag-card diag-top">
+          <div className="absolute rounded-[22px] overflow-hidden border-[5px] border-white shadow-[0_12px_40px_rgba(0,0,0,0.18)] [&>img]:w-full [&>img]:h-full [&>img]:object-cover [&>img]:block w-[260px] h-[190px] bottom-0 left-1/2 -translate-x-1/2 rotate-1 z-30">
             <img src="/images/hero/img3.png" alt="Aerospace" />
           </div>
         </div>

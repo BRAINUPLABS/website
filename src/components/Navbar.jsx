@@ -110,30 +110,33 @@ function NavItem({ item }) {
     : item.defaultCards;
 
   return (
-    <li className="mega-item" onMouseLeave={() => setHoveredLinkId(null)}>
-      <a href={item.href} className={`nav-link ${item.isActive ? 'active' : ''}`}>
-        {item.title} <i className="fas fa-chevron-down"></i>
+    <li className="group relative" onMouseLeave={() => setHoveredLinkId(null)}>
+      <a href={item.href} className={`py-2 px-3.5 text-[0.9rem] font-semibold rounded-lg transition-all whitespace-nowrap hover:text-[#0c709a] hover:bg-[#1e4fd8]/[0.06] ${item.isActive ? 'text-[#0c709a] bg-[#1e4fd8]/[0.06]' : 'text-[#5C6B82]'}`}>
+        {item.title} <i className="fas fa-chevron-down ml-1 text-xs"></i>
       </a>
-      <div className="mega-menu">
-        <div className="mega-inner">
-          <div className="mega-links">
-            <p className="mega-heading">{item.heading}</p>
+      <div className="absolute top-full left-1/2 -translate-x-1/2 w-max min-w-[600px] bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 mt-4 p-6 z-[1000]">
+        <div className="flex gap-8">
+          <div className="flex flex-col gap-3 w-[250px] shrink-0 border-r border-gray-100 pr-6">
+            <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{item.heading}</p>
             {item.links.map((link) => (
               <a 
                 key={link.id} 
                 href={link.href}
                 onMouseEnter={() => setHoveredLinkId(link.id)}
+                className="flex items-center gap-3 text-sm font-semibold text-gray-600 hover:text-[#0c709a] transition-colors"
               >
-                <i className={link.icon}></i> {link.label}
+                <i className={`${link.icon} w-5 text-center`}></i> {link.label}
               </a>
             ))}
           </div>
-          {activeCards.map((card, i) => (
-            <div className="mega-card" key={i}>
-              <img src={card.img} alt={card.label} />
-              <span>{card.label}</span>
-            </div>
-          ))}
+          <div className="flex gap-4">
+            {activeCards.map((card, i) => (
+              <div className="flex flex-col gap-3 group/card cursor-pointer w-[120px]" key={i}>
+                <img src={card.img} alt={card.label} className="w-full h-[80px] object-cover rounded-xl border-2 border-transparent group-hover/card:border-[#0c709a] transition-all" />
+                <span className="text-xs font-semibold text-gray-700 text-center">{card.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </li>
@@ -142,22 +145,24 @@ function NavItem({ item }) {
 
 export default function Navbar() {
   return (
-    <nav className="navbar" id="navbar">
-      <div className="nav-container">
-        <div className="nav-left">
-          <a href="/" className="nav-logo">
-            <img src="/images/logo/brain.png" alt="Logo" />
+    <nav className="fixed top-[38px] left-0 right-0 z-[999] bg-white shadow-[0_2px_10px_rgba(0,0,0,0.05)] overflow-visible" id="navbar">
+      <div className="flex items-center justify-between relative max-w-[1200px] mx-auto px-6 h-[90px]">
+        <div className="flex items-center shrink-0">
+          <a href="/" className="relative flex items-center">
+            <img src="/images/logo/brain.png" alt="Logo" className="h-[150px] w-auto object-contain absolute left-[-10px] top-1/2 -translate-y-1/2" />
           </a>
         </div>
-        <ul className="nav-menu" id="navMenu">
+        <ul className="flex gap-[30px] list-none absolute left-1/2 -translate-x-1/2 overflow-visible" id="navMenu">
           {navData.map((item) => (
             <NavItem key={item.id} item={item} />
           ))}
         </ul>
-        <div className="nav-right">
-          <a href="#demo" className="btn-signin">Book Demo</a>
-          <button className="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
+        <div className="flex items-center gap-5 shrink-0">
+          <a href="#demo" className="bg-gradient-to-br from-[#FF822E] to-[#ffaa6b] text-white py-2.5 px-5.5 rounded-full text-[0.88rem] font-bold transition-all shadow-[0_4px_16px_rgba(255,107,53,0.3)] whitespace-nowrap hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,53,0.4)]">Book Demo</a>
+          <button className="hidden flex-col gap-1.5 p-2 ml-auto" id="hamburger">
+            <span className="w-5.5 h-0.5 bg-[#0D1117] rounded-sm transition-all block"></span>
+            <span className="w-5.5 h-0.5 bg-[#0D1117] rounded-sm transition-all block"></span>
+            <span className="w-5.5 h-0.5 bg-[#0D1117] rounded-sm transition-all block"></span>
           </button>
         </div>
       </div>

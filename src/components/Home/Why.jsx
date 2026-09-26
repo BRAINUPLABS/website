@@ -33,19 +33,19 @@ const whyCards = [
 
 export default function Why() {
   return (
-    <section className="why" id="why">
-      <div className="section-container">
-        <div className="section-tag">⭐ Why Choose Us</div>
-        <h2 className="section-title">Why <span className="text-orange">Brain Up Labs</span>?</h2>
-        <p className="section-sub">
+    <section className="py-20 bg-[#F8F9FA]" id="why">
+      <div className="max-w-[1200px] mx-auto px-6 text-center">
+        <div className="inline-flex items-center gap-[6px] bg-[#09194512] text-[#0c709a] text-[0.8rem] font-bold tracking-[0.08em] uppercase py-[6px] px-[14px] rounded-full mb-[14px]">⭐ Why Choose Us</div>
+        <h2 className="font-['Space_Grotesk'] text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold leading-[1.2] mb-[14px] text-[#0D1117] text-left md:text-center">Why <span className="text-[#FF822E]">Brain Up Labs</span>?</h2>
+        <p className="text-[1.05rem] text-[#5C6B82] max-w-[600px] mx-auto mb-[30px] leading-[1.7] text-center">
           Six pillars that make us the most trusted STEM education partner for schools and parents.
         </p>
-        <div className="why-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 text-left">
           {whyCards.map((card, index) => (
-            <div key={index} className={`why-card reveal-up ${index > 0 ? `delay-${index}` : ''}`.trim()}>
-              <div className="why-icon"><i className={card.icon}></i></div>
-              <h4>{card.title}</h4>
-              <p>{card.desc}</p>
+            <div key={index} className={`bg-white rounded-[18px] p-6 shadow-[0_2px_20px_rgba(13,17,23,0.07)] hover:shadow-[0_16px_48px_rgba(13,17,23,0.14),0_4px_12px_rgba(255,130,46,0.12)] transition-all duration-300 flex flex-col items-start ${index > 0 ? `delay-${index}` : ''}`.trim()}>
+              <div className="w-14 h-14 bg-[#FF822E1A] text-[#FF822E] rounded-full flex items-center justify-center text-2xl mb-4"><i className={card.icon}></i></div>
+              <h4 className="font-bold text-lg mb-2 text-[#0D1117]">{card.title}</h4>
+              <p className="text-[#5C6B82] text-sm leading-[1.6]">{card.desc}</p>
             </div>
           ))}
         </div>
