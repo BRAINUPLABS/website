@@ -96,13 +96,15 @@ export default function Kits() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1100px] mx-auto mt-10 text-left">
           {advancedInnovationKits.map((kit) => (
-            <div className="bg-white rounded-[20px] overflow-hidden p-6 transition-all duration-[0.4s] shadow-[0_8px_25px_rgba(0,0,0,0.08)] flex flex-col hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)]" key={kit.id}>
-              <div className="w-full h-[200px] rounded-[12px] overflow-hidden mb-4">
+            <div className="bg-white rounded-[20px] overflow-hidden p-6 transition-all duration-[0.4s] shadow-[0_8px_25px_rgba(0,0,0,0.08)] flex flex-row gap-6 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)]" key={kit.id}>
+              <div className="w-1/2 rounded-[12px] overflow-hidden mb-4">
                 <img src={kit.image} alt={kit.title} className="w-full h-full object-cover" />
               </div>
-              <h4 className="text-[1.2rem] font-bold mb-2 leading-tight">{kit.title}</h4>
-              <p className="text-brand-text-light text-[0.95rem] leading-relaxed mb-6 flex-grow">{kit.description}</p>
-              <button className="w-full py-3 bg-brand-orange text-white rounded-[10px] font-bold text-[0.9rem] transition-colors hover:bg-[#e65c00]">Explore Kit →</button>
+              <div className="w-1/2 flex flex-col justify-between">
+              <h4 className="text-sm font-bold mb-2 leading-tight">{kit.title}</h4>
+              <p className="text-brand-text-light text-xs leading-relaxed mb-6 flex-grow">{kit.description}</p>
+              <button className="w-full py-3 bg-brand-orange text-white rounded-[10px] font-bold text-xs transition-colors hover:bg-[#e65c00]">Explore Kit →</button>
+              </div>
             </div>
           ))}
         </div>
