@@ -4,7 +4,7 @@ import { PrimaryButton, OutlineButton } from "./ui";
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
+    <section className="mt-20 mx-auto max-w-7xl px-6 py-14 lg:px-8">
       <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
         <div>
           <p className="text-sm font-semibold tracking-wide text-brand-orange">
