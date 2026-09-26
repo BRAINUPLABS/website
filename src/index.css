@@ -4,4 +4,44 @@
   --font-poppins: 'Poppins', sans-serif;
   --font-jakarta: 'Plus Jakarta Sans', sans-serif;
   --font-space: 'Space Grotesk', sans-serif;
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+
+  --color-brand-orange: #FF822E;
+  --color-brand-orange-light: #ffaa6b;
+  --color-brand-orange-dark: #d96318;
+  --color-brand-blue: #0c709a;
+  --color-brand-blue-light: #7dd4f7;
+  --color-brand-blue-dark: #1899cc;
+  --color-brand-yellow: #F7A824;
+  --color-brand-yellow-light: #fcc55a;
+  --color-brand-yellow-dark: #c9840d;
+  
+  --color-brand-bg-soft: #EEF2F7;
+  --color-brand-bg-dark: #0D1117;
+  --color-brand-bg-dark2: #161B27;
+  --color-brand-text-light: #5C6B82;
+  --color-brand-text-muted: #8A97A8;
+  --color-brand-border: #E2E8F0;
+  
+  --shadow-card: 0 2px 20px rgba(13, 17, 23, 0.07), 0 1px 4px rgba(13, 17, 23, 0.04);
+  --shadow-card-hover: 0 16px 48px rgba(13, 17, 23, 0.14), 0 4px 12px rgba(255, 130, 46, 0.12);
+  --shadow-glow-orange: 0 0 32px rgba(255, 130, 46, 0.35);
+  --shadow-glow-blue: 0 0 32px rgba(58, 187, 241, 0.35);
+
+  --radius-card: 18px;
+  --radius-card-sm: 10px;
+  --radius-card-md: 24px;
+  --radius-card-lg: 48px;
+  --radius-pill: 999px;
+}
+
+body {
+  font-family: var(--font-jakarta);
+  background-color: #F8F9FA;
+  color: #1A1A1A;
+}
+
+html {
+  scroll-behavior: smooth;
 }

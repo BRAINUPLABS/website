@@ -1,6 +1,6 @@
 export default function FutureSkills() {
   return (
-    <section className="py-[80px] bg-[#FF822E] px-4 md:px-10">
+    <section className="py-[80px] bg-brand-orange px-4 md:px-10">
     <div className="text-center max-w-[800px] mx-auto mb-[50px] text-white">
       <h2 className="text-[2.2rem] md:text-[3rem] font-bold mb-4 leading-tight">
         A complete Eco-System For <span className="text-[#0D1044]">Future Ready Skills</span>

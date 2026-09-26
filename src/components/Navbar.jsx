@@ -111,7 +111,7 @@ function NavItem({ item }) {
 
   return (
     <li className="group relative" onMouseLeave={() => setHoveredLinkId(null)}>
-      <a href={item.href} className={`py-2 px-3.5 text-[0.9rem] font-semibold rounded-lg transition-all whitespace-nowrap hover:text-[#0c709a] hover:bg-[#1e4fd8]/[0.06] ${item.isActive ? 'text-[#0c709a] bg-[#1e4fd8]/[0.06]' : 'text-[#5C6B82]'}`}>
+      <a href={item.href} className={`py-2 px-3.5 text-[0.9rem] font-semibold rounded-lg transition-all whitespace-nowrap hover:text-brand-blue hover:bg-[#1e4fd8]/[0.06] ${item.isActive ? 'text-brand-blue bg-[#1e4fd8]/[0.06]' : 'text-brand-text-light'}`}>
         {item.title} <i className="fas fa-chevron-down ml-1 text-xs"></i>
       </a>
       <div className="absolute top-full left-1/2 -translate-x-1/2 w-max min-w-[600px] bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 mt-4 p-6 z-[1000]">
@@ -123,7 +123,7 @@ function NavItem({ item }) {
                 key={link.id} 
                 href={link.href}
                 onMouseEnter={() => setHoveredLinkId(link.id)}
-                className="flex items-center gap-3 text-sm font-semibold text-gray-600 hover:text-[#0c709a] transition-colors"
+                className="flex items-center gap-3 text-sm font-semibold text-gray-600 hover:text-brand-blue transition-colors"
               >
                 <i className={`${link.icon} w-5 text-center`}></i> {link.label}
               </a>
@@ -132,7 +132,7 @@ function NavItem({ item }) {
           <div className="flex gap-4">
             {activeCards.map((card, i) => (
               <div className="flex flex-col gap-3 group/card cursor-pointer w-[120px]" key={i}>
-                <img src={card.img} alt={card.label} className="w-full h-[80px] object-cover rounded-xl border-2 border-transparent group-hover/card:border-[#0c709a] transition-all" />
+                <img src={card.img} alt={card.label} className="w-full h-[80px] object-cover rounded-xl border-2 border-transparent group-hover/card:border-brand-blue transition-all" />
                 <span className="text-xs font-semibold text-gray-700 text-center">{card.label}</span>
               </div>
             ))}
@@ -158,11 +158,11 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="flex items-center gap-5 shrink-0">
-          <a href="#demo" className="bg-gradient-to-br from-[#FF822E] to-[#ffaa6b] text-white py-2.5 px-5.5 rounded-full text-[0.88rem] font-bold transition-all shadow-[0_4px_16px_rgba(255,107,53,0.3)] whitespace-nowrap hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,53,0.4)]">Book Demo</a>
+          <a href="#demo" className="bg-gradient-to-br from-brand-orange to-brand-orange-light text-white py-2.5 px-5.5 rounded-full text-[0.88rem] font-bold transition-all shadow-[0_4px_16px_rgba(255,107,53,0.3)] whitespace-nowrap hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,53,0.4)]">Book Demo</a>
           <button className="hidden flex-col gap-1.5 p-2 ml-auto" id="hamburger">
-            <span className="w-5.5 h-0.5 bg-[#0D1117] rounded-sm transition-all block"></span>
-            <span className="w-5.5 h-0.5 bg-[#0D1117] rounded-sm transition-all block"></span>
-            <span className="w-5.5 h-0.5 bg-[#0D1117] rounded-sm transition-all block"></span>
+            <span className="w-5.5 h-0.5 bg-brand-bg-dark rounded-sm transition-all block"></span>
+            <span className="w-5.5 h-0.5 bg-brand-bg-dark rounded-sm transition-all block"></span>
+            <span className="w-5.5 h-0.5 bg-brand-bg-dark rounded-sm transition-all block"></span>
           </button>
         </div>
       </div>

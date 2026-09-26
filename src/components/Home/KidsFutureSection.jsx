@@ -1,6 +1,6 @@
 export default function KidsFutureSection() {
   return (
-    <section className="py-20 bg-[#FF822E]">
+    <section className="py-20 bg-brand-orange">
       <div className="text-center mb-12 flex flex-col items-center px-6 max-w-[1200px] mx-auto">
         <h2 className="text-white text-3xl md:text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold font-['Space_Grotesk'] mb-4 leading-tight">Empowering The Next Generation For <span className="text-[#0D1044]">Learning Program</span></h2>
         <div className="w-20 h-1 bg-[#FFD814] mb-6 rounded-full"></div>

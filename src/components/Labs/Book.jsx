@@ -25,7 +25,7 @@ const Book = ({ setShowModal, selectedLabs }) => {
 
     return (
         <div 
-            className="fixed inset-0 z-[99999] bg-[#0D1117]/70 backdrop-blur-md flex items-center justify-center p-5"
+            className="fixed inset-0 z-[99999] bg-brand-bg-dark/70 backdrop-blur-md flex items-center justify-center p-5"
             onClick={handleOverlayClick}
         >
             <div 
@@ -42,7 +42,7 @@ const Book = ({ setShowModal, selectedLabs }) => {
                     </button>
                 )}
 
-                <h2 className="text-3xl font-bold mb-8 text-[#0D1117]">
+                <h2 className="text-3xl font-bold mb-8 text-brand-bg-dark">
                     Book a Lab Demo
                 </h2>
 
@@ -142,7 +142,7 @@ const Book = ({ setShowModal, selectedLabs }) => {
                     
                     <button 
                         type="submit" 
-                        className="w-full p-4 bg-[#FF822E] hover:bg-[#d96318] text-white border-none rounded-xl text-lg font-bold cursor-pointer shadow-[0_8px_20px_rgba(255,130,46,0.3)] flex items-center justify-center gap-[10px] transition-all duration-300 hover:-translate-y-0.5"
+                        className="w-full p-4 bg-brand-orange hover:bg-brand-orange-dark text-white border-none rounded-xl text-lg font-bold cursor-pointer shadow-[0_8px_20px_rgba(255,130,46,0.3)] flex items-center justify-center gap-[10px] transition-all duration-300 hover:-translate-y-0.5"
                     >
                         <i className="fas fa-calendar-check"></i> Request A Quote
                     </button>

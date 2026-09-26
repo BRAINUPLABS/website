@@ -124,7 +124,7 @@ const FooterSection = ({ title, links }) => (
     <ul className="flex flex-col gap-3">
       {links.map((link, index) => (
         <li key={index}>
-          <a href={link.href} className="text-gray-400 hover:text-[#FF822E] text-sm transition-colors">{link.label}</a>
+          <a href={link.href} className="text-gray-400 hover:text-brand-orange text-sm transition-colors">{link.label}</a>
         </li>
       ))}
     </ul>
@@ -144,7 +144,7 @@ export default function Footer() {
           </div>
           <div className="flex gap-4">
             {SOCIAL_LINKS.map((social, idx) => (
-              <a key={idx} href={social.href} aria-label={social.label} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-300 hover:bg-[#FF822E] hover:text-white transition-all">
+              <a key={idx} href={social.href} aria-label={social.label} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-300 hover:bg-brand-orange hover:text-white transition-all">
                 <i className={social.icon}></i>
               </a>
             ))}
