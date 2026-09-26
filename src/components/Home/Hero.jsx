@@ -1,22 +1,50 @@
+import { useState, useEffect } from 'react';
+
 export default function Hero() {
+  const words = [
+    "Neuroscience",
+    "Robotics",
+    "IoT",
+    "Neurotech",
+    "Artificial Intelligence",
+    "Aerospace"
+  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % words.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="min-h-[90vh] relative overflow-hidden flex items-center bg-gradient-to-br from-[#fff8f0] via-[#fff] to-[#fff8f5] pt-[60px] pb-[40px] flex-col lg:flex-row lg:pt-[60px]" id="hero">
+    <section className="min-h-[90vh] mt-30 relative overflow-hidden flex items-center bg-gradient-to-br from-[#fff8f0] via-[#fff] to-[#fff8f5] pt-[60px] pb-[40px] flex-col lg:flex-row lg:pt-[60px]" id="hero">
     <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_70%_at_70%_50%,_rgba(30,79,216,0.07)_0%,_transparent_60%),radial-gradient(ellipse_50%_50%_at_20%_80%,_rgba(255,107,53,0.07)_0%,_transparent_60%)]"></div>
     <div className="absolute inset-0 pointer-events-none overflow-hidden" id="heroParticles"></div>
     <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center relative z-10">
       <div className="">
         <div className="inline-flex items-center gap-[6px] bg-gradient-to-br from-[rgba(30,79,216,0.1)] to-[rgba(74,127,255,0.1)] text-brand-blue border border-[rgba(30,79,216,0.2)] text-[0.8rem] font-bold py-[6px] px-[16px] rounded-full mb-5 animate-[fadeInDown_0.6s_ease_forwards]">🧠 Future-Ready Education Platform</div>
         <h1 className="font-['Space_Grotesk',_sans-serif] text-[clamp(2.4rem,5vw,4rem)] font-extrabold leading-[1.1] text-brand-bg-dark mb-3 animate-[fadeInLeft_0.7s_0.1s_ease_both]">
-          Unlock the <span className="text-brand-blue">Future of</span>
+          Unlock the <span className="text-brand-blue"><br/>Future of</span>
         </h1>
         <div className="min-h-[60px] overflow-hidden mb-5 animate-[fadeInLeft_0.7s_0.2s_ease_both]">
           <div className="relative">
-            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-brand-orange absolute top-0 transition-all duration-500 ease-in-out leading-[1.2] opacity-100 translate-y-0 relative">Neuroscience</span>
-            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-brand-orange absolute top-0 opacity-0 translate-y-[30px] transition-all duration-500 ease-in-out leading-[1.2]">Robotics</span>
-            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-brand-orange absolute top-0 opacity-0 translate-y-[30px] transition-all duration-500 ease-in-out leading-[1.2]">IoT</span>
-            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-brand-orange absolute top-0 opacity-0 translate-y-[30px] transition-all duration-500 ease-in-out leading-[1.2]">Neurotech</span>
-            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-brand-orange absolute top-0 opacity-0 translate-y-[30px] transition-all duration-500 ease-in-out leading-[1.2]">Artificial Intelligence</span>
-            <span className="block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-brand-orange absolute top-0 opacity-0 translate-y-[30px] transition-all duration-500 ease-in-out leading-[1.2]">Aerospace</span>
+            {words.map((word, index) => {
+              const isActive = index === currentIndex;
+              return (
+                <span
+                  key={word}
+                  className={`block font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.2rem)] font-extrabold text-brand-orange absolute top-0 transition-all duration-500 ease-in-out leading-[1.2] ${
+                    isActive
+                      ? "opacity-100 translate-y-0 relative"
+                      : "opacity-0 translate-y-[30px]"
+                  }`}
+                >
+                  {word}
+                </span>
+              );
+            })}
           </div>
         </div>
         <p className="text-[1.05rem] text-brand-text-light leading-[1.8] max-w-[480px] mb-8 animate-[fadeInLeft_0.7s_0.3s_ease_both]">Empowering students with cutting-edge STEM skills through hands-on learning, real-world
