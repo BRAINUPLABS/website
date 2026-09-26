@@ -1,63 +1,154 @@
-export default function Tabletop() {
+import React from "react";
+import {
+  FlaskConical,
+  School,
+  Database,
+  Armchair,
+  Users,
+  ArrowRight,
+  GraduationCap,
+  ClipboardList,
+  BarChart3,
+} from "lucide-react";
+import productPhoto from "../../assets/image.jpeg";
+
+const features = [
+  {
+    icon: School,
+    iconBg: "bg-brand-orange/10",
+    iconColor: "text-brand-orange",
+    title: "No Separate Lab Setup",
+    body: "Our kits work inside existing classrooms without any infrastructure changes.",
+  },
+  {
+    icon: Database,
+    iconBg: "bg-brand-blue/10",
+    iconColor: "text-brand-blue",
+    title: "Low Infrastructure Cost",
+    body: "No renovation, special wiring or dedicated lab space required.",
+  },
+  {
+    icon: Armchair,
+    iconBg: "bg-brand-yellow/10",
+    iconColor: "text-brand-yellow",
+    title: "Works in Regular Classrooms",
+    body: "Set up on any standard desk or table in minutes.",
+  },
+  {
+    icon: Users,
+    iconBg: "bg-brand-orange-dark/10",
+    iconColor: "text-brand-orange-dark",
+    title: "Teacher-Friendly",
+    body: "Step-by-step guides make every teacher an STEM expert.",
+  },
+];
+
+const stats = [
+  {
+    icon: GraduationCap,
+    color: "text-brand-bg-dark",
+    title: "Grade 4 – 8",
+    body: "Complete STEM progression",
+  },
+  {
+    icon: ClipboardList,
+    color: "text-brand-blue",
+    title: "Project-Based Learning",
+    body: "Hands-on and practical",
+  },
+  {
+    icon: BarChart3,
+    color: "text-brand-yellow",
+    title: "Curriculum Aligned",
+    body: "Mapped with NEP and grade-wise learning outcomes",
+  },
+  {
+    icon: Users,
+    color: "text-brand-orange",
+    title: "Teacher Training",
+    body: "Continuous support and resources",
+  },
+];
+
+export default function Tabletop({
+  photoSrc = productPhoto,
+  onExploreClick,
+}) {
   return (
-    <section className="py-[60px] bg-white" id="tabletop">
-    <div className="max-w-[1200px] mx-auto px-5 text-left">
-      <div className="max-w-[1200px] mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-[6px] bg-[rgba(9,25,69,0.07)] text-brand-blue text-[0.8rem] font-bold tracking-[0.08em] uppercase py-[6px] px-[14px] rounded-full mb-[14px]">🔬 Our Innovation</div>
-        <h2 className="font-['Space_Grotesk',_sans-serif] text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold leading-[1.2] mb-[14px] text-brand-bg-dark">LABS....! Table-Top <span className="text-brand-orange">Solutions</span></h2>
-      </div>
-      <p className="text-[1.05rem] text-brand-text-light max-w-[600px] mx-auto mb-[30px] leading-[1.7] text-center">No complicated setup. No massive investment. Just pure learning — anywhere, anytime.</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-start mt-5">
-        <div className="reveal-left">
-          <h3 className="font-['Space_Grotesk',_sans-serif] text-[1.8rem] font-bold mb-[30px]">Why Schools <span className="text-brand-blue">Choose Us</span></h3>
-          <ul className="flex flex-col gap-[22px]">
-            <li className="flex items-start gap-4"><span className="w-8 h-8 rounded-full min-w-[32px] bg-gradient-to-br from-brand-blue to-brand-blue-light flex items-center justify-center text-white text-[0.75rem]"><i className="fas fa-check"></i></span>
-              <div><strong className="block text-[0.97rem] font-bold mb-1">No separate lab setup required</strong>
-                <p className="text-[0.87rem] text-brand-text-light leading-[1.6]">Our kits work inside existing classrooms without any infrastructure changes.</p>
-              </div>
-            </li>
-            <li className="flex items-start gap-4"><span className="w-8 h-8 rounded-full min-w-[32px] bg-gradient-to-br from-brand-blue to-brand-blue-light flex items-center justify-center text-white text-[0.75rem]"><i className="fas fa-check"></i></span>
-              <div><strong className="block text-[0.97rem] font-bold mb-1">No additional infrastructure cost</strong>
-                <p className="text-[0.87rem] text-brand-text-light leading-[1.6]">Zero renovation, zero wiring, zero special equipment needed.</p>
-              </div>
-            </li>
-            <li className="flex items-start gap-4"><span className="w-8 h-8 rounded-full min-w-[32px] bg-gradient-to-br from-brand-blue to-brand-blue-light flex items-center justify-center text-white text-[0.75rem]"><i className="fas fa-check"></i></span>
-              <div><strong className="block text-[0.97rem] font-bold mb-1">Works inside regular classrooms</strong>
-                <p className="text-[0.87rem] text-brand-text-light leading-[1.6]">Deploy on any standard desk or table in minutes.</p>
-              </div>
-            </li>
-            <li className="flex items-start gap-4"><span className="w-8 h-8 rounded-full min-w-[32px] bg-gradient-to-br from-brand-blue to-brand-blue-light flex items-center justify-center text-white text-[0.75rem]"><i className="fas fa-check"></i></span>
-              <div><strong className="block text-[0.97rem] font-bold mb-1">Easy to deploy &amp; teacher friendly</strong>
-                <p className="text-[0.87rem] text-brand-text-light leading-[1.6]">Step-by-step guides make every teacher an STEM expert.</p>
-              </div>
-            </li>
-          </ul>
+    <section className="w-full bg-white">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
+          {/* Left: copy */}
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full bg-brand-orange/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-orange-dark">
+              <FlaskConical className="h-3.5 w-3.5" />
+              OUR INNOVATION
+            </span>
+
+            <h1 className="mt-5 text-4xl font-extrabold leading-tight text-brand-bg-dark sm:text-5xl">
+              LABS...!
+              <br />
+              <span className="text-brand-orange">Table-Top</span> Solutions
+            </h1>
+
+            <p className="mt-4 max-w-md text-lg text-brand-text-light">
+              Hands-on STEM learning that fits into the classroom you already
+              have.
+            </p>
+
+            <div className="mt-3 h-1 w-14 rounded-full bg-brand-orange" />
+
+            <ul className="mt-8 space-y-6">
+              {features.map(({ icon: Icon, iconBg, iconColor, title, body }) => (
+                <li key={title} className="flex items-start gap-4">
+                  <span
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${iconBg}`}
+                  >
+                    <Icon className={`h-5 w-5 ${iconColor}`} />
+                  </span>
+                  <div>
+                    <p className="font-semibold text-brand-bg-dark">{title}</p>
+                    <p className="mt-0.5 text-sm text-brand-text-light">{body}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <button
+              type="button"
+              onClick={onExploreClick}
+              className="mt-10 inline-flex items-center gap-2 rounded-lg bg-brand-orange px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-orange-dark"
+            >
+              Explore Our Kits
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+
+          {/* Right: product photo */}
+          <div className="relative">
+            <img
+              src={photoSrc}
+              alt="Brain Up Labs STEM kit box with components laid out on a table"
+              className="w-full rounded-2xl object-cover shadow-xl"
+            />
+          </div>
         </div>
-        <div className="flex flex-col gap-5">
-          <div className="bg-white rounded-[18px] py-6 px-7 shadow-[0_2px_20px_rgba(13,17,23,0.07),0_1px_4px_rgba(13,17,23,0.04)] border border-brand-border flex items-center gap-5 transition-all duration-[0.35s] ease-[cubic-bezier(.4,0,.2,1)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(13,17,23,0.14),0_4px_12px_rgba(255,130,46,0.12)]">
-            <div className="w-[52px] h-[52px] rounded-[14px] min-w-[52px] flex items-center justify-center text-[1.3rem] text-white bg-gradient-to-br from-brand-orange to-brand-orange-light"><i className="fas fa-flask"></i></div>
-            <div className="flex flex-col">
-              <h4 className="text-[1rem] font-bold mb-1">Easy To<br /> Develop</h4>
-              <p className="text-[0.87rem] text-brand-text-light">Through a DIY kits.</p>
+
+        {/* Stats bar */}
+        <div className="mt-16 grid grid-cols-2 gap-8 rounded-2xl bg-brand-orange/5 px-8 py-8 sm:grid-cols-4">
+          {stats.map(({ icon: Icon, color, title, body }) => (
+            <div key={title} className="flex items-start gap-3">
+              <Icon className={`h-6 w-6 shrink-0 ${color}`} />
+              <div>
+                <p className="text-sm font-semibold text-brand-bg-dark">
+                  {title}
+                </p>
+                <p className="mt-0.5 text-xs text-brand-text-light">{body}</p>
+              </div>
             </div>
-          </div>
-          <div className="bg-white rounded-[18px] py-6 px-7 shadow-[0_2px_20px_rgba(13,17,23,0.07),0_1px_4px_rgba(13,17,23,0.04)] border border-brand-border flex items-center gap-5 transition-all duration-[0.35s] ease-[cubic-bezier(.4,0,.2,1)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(13,17,23,0.14),0_4px_12px_rgba(255,130,46,0.12)]">
-            <div className="w-[52px] h-[52px] rounded-[14px] min-w-[52px] flex items-center justify-center text-[1.3rem] text-white bg-gradient-to-br from-brand-blue to-brand-blue-light"><i className="fas "></i>₹</div>
-            <div className="flex flex-col">
-              <h4 className="text-[1rem] font-bold mb-1">No Extra Cost</h4>
-              <p className="text-[0.87rem] text-brand-text-light">Affordable subscription model. No hidden infrastructure expenses.</p>
-            </div>
-          </div>
-          <div className="bg-white rounded-[18px] py-6 px-7 shadow-[0_2px_20px_rgba(13,17,23,0.07),0_1px_4px_rgba(13,17,23,0.04)] border border-brand-border flex items-center gap-5 transition-all duration-[0.35s] ease-[cubic-bezier(.4,0,.2,1)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(13,17,23,0.14),0_4px_12px_rgba(255,130,46,0.12)]">
-            <div className="w-[52px] h-[52px] rounded-[14px] min-w-[52px] flex items-center justify-center text-[1.3rem] text-white bg-gradient-to-br from-[#11998e] to-[#38ef7d]"><i className="fas fa-expand-arrows-alt"></i></div>
-            <div className="flex flex-col">
-              <h4 className="text-[1rem] font-bold mb-1">No Seprate Space Required</h4>
-              <p className="text-[0.87rem] text-brand-text-light">Compact table-top kits that fit in any standard classroom space.</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 }
