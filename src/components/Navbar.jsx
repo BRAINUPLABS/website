@@ -40,8 +40,8 @@ const navData = [
     links: [
       { id: 'labs', label: 'Labs', icon: 'fas fa-flask', href: '/school-programs/labs', cards: [ { img: '/images/school/sch_002.jpg', label: "Infinity Maker's Place" }, { img: '/images/school/sch_03.png', label: "Little Maker's Space" }, { img: '/images/school/sch_01.jpeg', label: 'Robocraft Lab' }, { img: '/images/school/sch_04.jpg', label: 'Mechatron Lab' } ] },
       { id: 'school-books', label: 'Books', icon: 'fas fa-book-open', href: '/school-programs/books', cards: [ { img: Book1, label: 'Classes 1 to 12' }, { img: Book2, label: 'Classes 1 to 8' }, { img: Book3, label: 'Classes 9 to 10' }, { img: Book2, label: 'Classes 1 to 8' } ] },
-      { id: 'atl', label: 'ATL Labs', icon: 'fas fa-school', href: '#', cards: [ { img: '/images/school/sch_03.png', label: 'Tinkering Labs' }, { img: '/images/school/sch_01.jpeg', label: 'Components' }, { img: '/images/school/sch_04.jpg', label: 'Training' }, { img: '/images/school/sch_002.jpg', label: 'Support' } ] },
-      { id: 'training', label: 'Teacher Training', icon: 'fas fa-chalkboard-teacher', href: '#', cards: [ { img: '/images/school/sch_04.jpg', label: 'Workshops' }, { img: '/images/journey/AICTE.png', label: 'Certifications' }, { img: '/images/school/sch_01.jpeg', label: 'Seminars' }, { img: '/images/school/sch_03.png', label: 'Resources' } ] }
+      { id: 'atl', label: 'ATL Labs', icon: 'fas fa-school', href: '/school-programs/atl', cards: [ { img: '/images/school/sch_03.png', label: 'Tinkering Labs' }, { img: '/images/school/sch_01.jpeg', label: 'Components' }, { img: '/images/school/sch_04.jpg', label: 'Training' }, { img: '/images/school/sch_002.jpg', label: 'Support' } ] },
+      { id: 'training', label: 'Teacher Training', icon: 'fas fa-chalkboard-teacher', href: '/school-programs/teacher-training', cards: [ { img: '/images/school/sch_04.jpg', label: 'Workshops' }, { img: '/images/journey/AICTE.png', label: 'Certifications' }, { img: '/images/school/sch_01.jpeg', label: 'Seminars' }, { img: '/images/school/sch_03.png', label: 'Resources' } ] }
     ]
   },
   {
