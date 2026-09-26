@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Book1 from '../assets/Books/1.png';
 import Book2 from '../assets/Books/2.png';
 import Book3 from '../assets/Books/3.png';
@@ -111,22 +112,22 @@ function NavItem({ item }) {
 
   return (
     <li className="group relative" onMouseLeave={() => setHoveredLinkId(null)}>
-      <a href={item.href} className={`py-2 px-3.5 text-[0.9rem] font-semibold rounded-lg transition-all whitespace-nowrap hover:text-brand-blue hover:bg-[#1e4fd8]/[0.06] ${item.isActive ? 'text-brand-blue bg-[#1e4fd8]/[0.06]' : 'text-brand-text-light'}`}>
+      <Link to={item.href} className={`py-2 px-3.5 text-[0.9rem] font-semibold rounded-lg transition-all whitespace-nowrap hover:text-brand-blue hover:bg-[#1e4fd8]/[0.06] ${item.isActive ? 'text-brand-blue bg-[#1e4fd8]/[0.06]' : 'text-brand-text-light'}`}>
         {item.title} <i className="fas fa-chevron-down ml-1 text-xs"></i>
-      </a>
+      </Link>
       <div className="absolute top-full left-1/2 -translate-x-1/2 w-max min-w-[600px] bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 mt-4 p-6 z-[1000]">
         <div className="flex gap-8">
           <div className="flex flex-col gap-3 w-[250px] shrink-0 border-r border-gray-100 pr-6">
             <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{item.heading}</p>
             {item.links.map((link) => (
-              <a 
+              <Link 
                 key={link.id} 
-                href={link.href}
+                to={link.href}
                 onMouseEnter={() => setHoveredLinkId(link.id)}
                 className="flex items-center gap-3 text-sm font-semibold text-gray-600 hover:text-brand-blue transition-colors"
               >
                 <i className={`${link.icon} w-5 text-center`}></i> {link.label}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="flex gap-4">
@@ -148,9 +149,9 @@ export default function Navbar() {
     <nav className="fixed top-[38px] left-0 right-0 z-[999] bg-white shadow-[0_2px_10px_rgba(0,0,0,0.05)] overflow-visible" id="navbar">
       <div className="flex items-center justify-between relative max-w-[1200px] mx-auto px-6 h-[90px]">
         <div className="flex items-center shrink-0">
-          <a href="/" className="relative flex items-center">
+          <Link to="/" className="relative flex items-center">
             <img src="/images/logo/brain.png" alt="Logo" className="h-[150px] w-auto object-contain absolute left-[-10px] top-1/2 -translate-y-1/2" />
-          </a>
+          </Link>
         </div>
         <ul className="flex gap-[30px] list-none absolute left-1/2 -translate-x-1/2 overflow-visible" id="navMenu">
           {navData.map((item) => (
@@ -158,7 +159,7 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="flex items-center gap-5 shrink-0">
-          <a href="#demo" className="bg-gradient-to-br from-brand-orange to-brand-orange-light text-white py-2.5 px-5.5 rounded-full text-[0.88rem] font-bold transition-all shadow-[0_4px_16px_rgba(255,107,53,0.3)] whitespace-nowrap hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,53,0.4)]">Book Demo</a>
+          <Link to="#demo" className="bg-gradient-to-br from-brand-orange to-brand-orange-light text-white py-2.5 px-5.5 rounded-full text-[0.88rem] font-bold transition-all shadow-[0_4px_16px_rgba(255,107,53,0.3)] whitespace-nowrap hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,53,0.4)]">Book Demo</Link>
           <button className="hidden flex-col gap-1.5 p-2 ml-auto" id="hamburger">
             <span className="w-5.5 h-0.5 bg-brand-bg-dark rounded-sm transition-all block"></span>
             <span className="w-5.5 h-0.5 bg-brand-bg-dark rounded-sm transition-all block"></span>
