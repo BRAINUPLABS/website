@@ -6,7 +6,7 @@ export default function Demo() {
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="flex-1 text-white">
             <div className="inline-flex items-center gap-[6px] bg-[#ffffff15] text-white text-[0.8rem] font-bold tracking-[0.08em] uppercase py-[6px] px-[14px] rounded-full mb-[20px]"> 📅 Book a Demo </div>
-            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold mb-6 font-['Space_Grotesk'] leading-[1.2]">Let's Bring Hands-On STEM Learning <span className="text-brand-orange">To Your School</span></h2>
+            <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold mb-6 font-['Space_Grotesk',_sans-serif] leading-[1.2]">Let's Bring Hands-On STEM Learning <span className="text-brand-orange">To Your School</span></h2>
             <p className="text-white/80 text-[1.05rem] leading-[1.7] mb-8">Fill in your details and our team will reach out within 24 hours to schedule a free demonstration at your school.</p>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-white/90 font-medium"><i className="fas fa-check-circle text-brand-blue text-xl"></i> Free 45-minute demo session</li>

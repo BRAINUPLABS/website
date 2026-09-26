@@ -54,7 +54,7 @@ const Books = () => {
           <div className="inline-flex items-center gap-2 bg-white/5 text-brand-blue-light px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10 shadow-[0_0_20px_rgba(125,212,247,0.2)] mb-5 backdrop-blur-md">
             <Sparkles size={14} /> School Programs
           </div>
-          <h1 className="font-['Space_Grotesk'] text-[clamp(2rem,4vw,3.5rem)] font-extrabold mb-5 leading-[1.1] tracking-tight">
+          <h1 className="font-['Space_Grotesk',_sans-serif] text-[clamp(2rem,4vw,3.5rem)] font-extrabold mb-5 leading-[1.1] tracking-tight">
             Next-Generation <span className="bg-gradient-to-r from-brand-orange to-brand-yellow-light text-transparent bg-clip-text">STEM Books</span>
           </h1>
           <p className="text-base text-gray-300 leading-relaxed max-w-[600px] mx-auto">
@@ -87,7 +87,7 @@ const Books = () => {
         <div className="bg-gradient-to-r from-brand-bg-dark to-brand-bg-dark2 rounded-[28px] py-10 px-7 text-center text-white relative overflow-hidden shadow-[0_12px_30px_rgba(0,0,0,0.15)]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(12,112,154,0.4),transparent)] opacity-50"></div>
           <div className="relative z-10">
-            <h2 className="font-['Space_Grotesk'] text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">Ready to transform your school?</h2>
+            <h2 className="font-['Space_Grotesk',_sans-serif] text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">Ready to transform your school?</h2>
             <p className="text-base text-gray-300 max-w-[500px] mx-auto mb-7 leading-relaxed">Partner with Brain Up Labs to build a future-ready learning ecosystem for your students.</p>
             <button onClick={(e) => { e.preventDefault(); setSelectedLabId(""); setShowModal(true); }} className="inline-flex items-center gap-2 bg-brand-orange text-white px-6 py-3 rounded-full font-bold text-base transition-all duration-300 hover:bg-brand-orange-dark hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(255,130,46,0.3)]">
               Book a Free Consultation <ArrowRight size={18} />

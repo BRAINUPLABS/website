@@ -2,7 +2,7 @@ export default function AwardsRecognitionBlock() {
   return (
     <section className="py-20 bg-[#F8F9FA]">
       <div className="text-center mb-12 flex flex-col items-center px-6 max-w-[1200px] mx-auto">
-        <h2 className="font-['Space_Grotesk'] text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold leading-[1.2] mb-[14px] text-brand-bg-dark">
+        <h2 className="font-['Space_Grotesk',_sans-serif] text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold leading-[1.2] mb-[14px] text-brand-bg-dark">
           Startup Journey & <span className="text-brand-orange">Achievements</span>
         </h2>
         <div className="w-20 h-1 bg-[#FFD814] mb-6 rounded-full"></div>

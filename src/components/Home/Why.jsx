@@ -36,7 +36,7 @@ export default function Why() {
     <section className="py-20 bg-[#F8F9FA]" id="why">
       <div className="max-w-[1200px] mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-[6px] bg-[#09194512] text-brand-blue text-[0.8rem] font-bold tracking-[0.08em] uppercase py-[6px] px-[14px] rounded-full mb-[14px]">⭐ Why Choose Us</div>
-        <h2 className="font-['Space_Grotesk'] text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold leading-[1.2] mb-[14px] text-brand-bg-dark text-left md:text-center">Why <span className="text-brand-orange">Brain Up Labs</span>?</h2>
+        <h2 className="font-['Space_Grotesk',_sans-serif] text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold leading-[1.2] mb-[14px] text-brand-bg-dark text-left md:text-center">Why <span className="text-brand-orange">Brain Up Labs</span>?</h2>
         <p className="text-[1.05rem] text-brand-text-light max-w-[600px] mx-auto mb-[30px] leading-[1.7] text-center">
           Six pillars that make us the most trusted STEM education partner for schools and parents.
         </p>
