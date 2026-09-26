@@ -1,35 +1,41 @@
+import Class4 from "../../assets/Hero/Kits/Class4.png";
+import Class5 from "../../assets/Hero/Kits/Class5.png";
+import Class6 from "../../assets/Hero/Kits/Class6.png";
+import Class7 from "../../assets/Hero/Kits/Class7.png";
+import Class8 from "../../assets/Hero/Kits/Class8.png";
+
 const kitCategories = [
   {
     id: 1,
-    image: "/images/ecosystem/class4.png",
+    image: Class4,
     class: 4,
     title: "NANO PLAY KIT",
     desc: "A fun introduction to electronics and problem solving."
   },
   {
     id: 2,
-    image: "/images/ecosystem/class5.png",
+    image: Class5,
     class: 5,
     title: "SMART SYSTEMS KIT",
     desc: "Explore sensors and build real-world smart systems."
   },
   {
     id: 3,
-    image: "/images/ecosystem/class6.png",
+    image: Class6,
     class: 6,
     title: "AI-READY SENSOR INTELLIGENCE KIT",
     desc: "Work with sensors and develop basic AI concepts."
   },
   {
     id: 4,
-    image: "/images/ecosystem/same.png",
+    image: Class7,
     class: 7,
     title: "ESP32 IOT & SMART SYSTEMS KIT",
     desc: "Build connected projects and explore IoT."
   },
   {
     id: 5,
-    image: "/images/ecosystem/same.png",
+    image: Class8,
     class: 8,
     title: "ROBOTICS & AI TRANSITION KIT",
     desc: "Take the next step into robotics and artificial intelligence."
