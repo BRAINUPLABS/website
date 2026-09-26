@@ -86,7 +86,7 @@ export default function Kits() {
           ))}
         </div>
 
-        <h2 className="font-['Space_Grotesk',_sans-serif] mt-10 text-2xl font-bold leading-[1.2] mb-[14px] text-brand-bg-dark">
+        <h2 className="font-['Space_Grotesk',_sans-serif] text-2xl font-bold leading-[1.2] mt-10 mb-[14px] text-brand-bg-dark">
           Advanced Innovation Kits
         </h2>
 
