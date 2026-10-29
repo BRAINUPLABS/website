@@ -9,7 +9,7 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Hackathon from './pages/Impact/Hackathon';
 
-import Maintanance from './pages/Maintanance';
+// import Maintanance from './pages/Maintanance';
 
 import { MailQuestionMarkIcon } from 'lucide-react';
 
@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route element={<Layout />}>
+        <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/school-programs/labs" element={<Labs />} />
@@ -26,9 +26,9 @@ function App() {
           <Route path="/impact/hackathons" element={<Hackathon />} />
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/terms-and-conditions" element={<Terms />} />
-        </Route> */}
+        </Route>
         {/* <Route path="/" element={<Maintanance />} /> */}
-        <Route path='*' element={<Maintanance />} />
+        {/* <Route path='*' element={<Maintanance />} /> */}
       </Routes>
     </Router>
   )
